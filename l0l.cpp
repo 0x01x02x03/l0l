@@ -33,6 +33,10 @@ int main(int argc, char * argv[]){
 
         strtok(command, " ");
 
+        if (cin.eof()) {
+            closeApp();
+        }
+
         if (strlen(command) == 0 || command[0] == '\r' || command[0] == '\n');
 
         // Commands..

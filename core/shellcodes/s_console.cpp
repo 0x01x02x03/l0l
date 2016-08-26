@@ -325,7 +325,7 @@ do{
 
         else {
             cout <<
-                    "\t\t\No option. Just use generate.\n\n";
+                    "\t\tNo option. Just use generate.\n\n";
         }
 
         // ..

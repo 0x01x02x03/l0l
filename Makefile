@@ -10,6 +10,7 @@ clean:
 	rm $(TARGET)
 
 install:
+	$(CC) -o $(TARGET) $(TARGET).cpp
 	mkdir -p $(DESTDIR)/usr/share/$(TARGET)
 	cp -a core __init__.py $(TARGET) $(DESTDIR)/usr/share/$(TARGET)
 	mkdir -p $(DESTDIR)/usr/bin/

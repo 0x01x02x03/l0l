@@ -48,7 +48,15 @@ void genshellcode(int argp, string os, string type, string a1, string a2)
     outfile << session;
     outfile.close();
 
-    system("python2 session.py");
+    // Thanks, xorond.
+    // https://github.com/roissy/l0l/pull/8
+
+    #ifdef OS_Windows
+        system("python session.py");
+    #else
+        system("python2 session.py");
+    #endif
+
 
     cout << "\n";
     remove("session.py");

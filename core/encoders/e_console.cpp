@@ -29,6 +29,10 @@ do{
 
     strtok(usecmd, " ");
 
+    if (cin.eof()) {
+        closeApp();
+    }
+
     if (strlen(usecmd) == 0 || usecmd[0] == '\r' || usecmd[0] == '\n');
 
     // Use Commands

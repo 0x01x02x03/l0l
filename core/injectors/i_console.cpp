@@ -27,8 +27,11 @@ do{
     char* usecmd = strdup(icmd.c_str());
     //char* usecmd2 = strdup(icmd.c_str());
 
-
     strtok(usecmd, " ");
+
+    if (cin.eof()) {
+        closeApp();
+    }
 
     if (strlen(usecmd) == 0 || usecmd[0] == '\r' || usecmd[0] == '\n');
 

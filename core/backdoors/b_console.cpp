@@ -34,6 +34,10 @@ do{
 
     string modulen = str;
 
+    if (cin.eof()) {
+        closeApp();
+    }
+
     if (strlen(usecmd) == 0 || usecmd[0] == '\r' || usecmd[0] == '\n');
 
     // Backdoor Commands

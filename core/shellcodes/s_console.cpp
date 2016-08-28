@@ -1,7 +1,7 @@
 /**
     l0l - Exploit Development Kit
     Authors:roissy
-    Greetz:B3mB4m, esw0rmer
+    Greetz:B3mB4m
 */
 
 do{

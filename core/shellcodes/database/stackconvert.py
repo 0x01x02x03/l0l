@@ -1,6 +1,6 @@
-#------------------------------------------------------------------# 
+#------------------------------------------------------------------#
 #Author  : roissy
-#Greetz  : b3mb4m, esw0rmer
+#Greetz  : b3mb4m
 #Concat  : roissy@tuta.io
 #Project : https://github.com/roissy/l0l
 #LICENSE : https://github.com/roissy/l0l/blob/master/LICENSE
@@ -45,7 +45,7 @@ def IP( ip):
 	db2 = []
 	for x in ip:
 		db.append(decimaltohex( int(x)))
-	for x in db: 
+	for x in db:
 		if len(x) == 1:
 			x = "0"+x
 		db2.append(x)
@@ -75,7 +75,7 @@ def ARM( string):
 		for x in range(0,len(string),4):
 			db.append(ARMsplitter(string[x:x+4]))
 		return "".join(db)
-		
+
 def ARMsplitter( hexdump, pushdword="None"):
 	db = []
 	if pushdword == "None":
@@ -85,7 +85,7 @@ def ARMsplitter( hexdump, pushdword="None"):
 			first = first.decode('utf-8')
 			second = re.findall("..?", first)[::-1]
 			db.append("\\x"+"\\x".join(second))
-		return "".join(db)			
+		return "".join(db)
 
 
 
@@ -110,7 +110,7 @@ def stackconvertSTR( string, win=False):
 			db.append(splitter(string[x:x+4]))
 		return "".join(db[::-1])
 		#return "".join(db)
-		
+
 	#Linux_x86
 	#68 PUSH DWORD
 	#6668 PUSH WORD
@@ -158,7 +158,7 @@ def filler( string, number):
 		if string[x] == "/":
 			string[x] = "/"*number
 			break
-	return "".join(string) 
+	return "".join(string)
 
 
 def splitter( hexdump, pushdword="None"):
@@ -170,9 +170,9 @@ def splitter( hexdump, pushdword="None"):
 			first = first.decode('utf-8')
 			second = re.findall("..?", first)[::-1]
 			db.append("\\x"+"\\x".join(second))
-		return "\\x68"+"".join(db)	
-				
-	else:		
+		return "\\x68"+"".join(db)
+
+	else:
 		#Byte ..
 		if len(hexdump) == 1:
 			string = codecs.encode(str.encode(hexdump), 'hex')

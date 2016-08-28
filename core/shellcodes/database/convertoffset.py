@@ -1,6 +1,6 @@
-#------------------------------------------------------------------# 
+#------------------------------------------------------------------#
 #Author  : roissy
-#Greetz  : b3mb4m, esw0rmer
+#Greetz  : b3mb4m
 #Concat  : roissy@tuta.io
 #Project : https://github.com/roissy/l0l
 #LICENSE : https://github.com/roissy/l0l/blob/master/LICENSE
@@ -12,7 +12,7 @@ def binarytodecimal( number):
 	total = 0
 	for x in xrange(0, len(str(number))):
 		total = total + int(number[x])*(2**x)
-	return total	
+	return total
 
 def binarytooctal( number):
 	number = binarytodecimal( number)
@@ -28,15 +28,15 @@ def octaltodecimal( number):
 	total = 0
 	for x in xrange(0, len(str(number))):
 		total = total + int(number[x])*(8**x)
-	return total	
+	return total
 
 def octaltobinary( number):
 	number = octaltodecimal( number)
-	return decimaltobinary( number)	
+	return decimaltobinary( number)
 
 def octaltohex( number):
 	number = octaltodecimal( number)
-	return decimaltohex( number)	
+	return decimaltohex( number)
 
 
 def hextodecimal( number):

@@ -92,9 +92,7 @@ do{
     }
     else if(strcmp(usecmd, "generate") == 0){
         // Include generate command .assets...
-
-        // Outputs
-        #include "raw.cpp"
+        #include "generate.cpp"
     }
     else{
         // Set Red Color

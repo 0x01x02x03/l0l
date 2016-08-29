@@ -1,11 +1,3 @@
-
-/* Os detect */
-
-#ifdef __unix__
-#elif defined(_WIN32) || defined(WIN32)
-#define OS_Windows
-#endif
-
 /* C Headers */
 
 #include <stdio.h>
@@ -23,6 +15,14 @@
 #include <fstream>
 
 using namespace std;
+
+
+/* Os detect */
+
+#ifdef __unix__
+#elif defined(_WIN32) || defined(WIN32)
+#define OS_Windows
+#endif
 
 /* lib */
 

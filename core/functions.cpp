@@ -1,5 +1,5 @@
 
-// Os detection and Clear Screen Functions.
+// Clear Screen Functions.
 
 void clear(){
 

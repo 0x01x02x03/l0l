@@ -4,7 +4,7 @@ void genshellcode(int argp, string os, string type, string a1, string a2)
 {
     string session;
 
-    session="from core.shellcodes.database.generator import *\n";
+    session="from core.database.generator import *\n";
     session += "input = \"";
     session += a1;
     session += "\"\n";

@@ -8,8 +8,6 @@
 
 
 def ExeFile( shellcode, OS=None):
-    if OS == None:
-        OS = detectOS()
 
     from logger import logs
     from Database.exedb import ros
@@ -42,7 +40,7 @@ def ExeFile( shellcode, OS=None):
         padd = db[10]
     elif OS == "linuxarm":
         padd = db[11]
-    elif OS == "freebsdarm":
+    elif OS == "freebsdarm":  
         padd = db[12]
     elif OS == "opensbdarm":
        padd = db[13]
@@ -55,5 +53,5 @@ def ExeFile( shellcode, OS=None):
     shellcode = shellcode.replace("\\x", "")
 
     shellcode = padd.replace("SHELLCODE", shellcode)
-    logs( shellcode.decode("hex"), None)
+    logs( shellcode.decode("hex"), None, kakaos="windows")
 

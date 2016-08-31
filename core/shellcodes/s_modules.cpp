@@ -13,7 +13,7 @@ else if(strcmp(str, "linux86/download&execute") == 0){
     type = "shellcode";
 }
 
-else if(strcmp(str, "linux86/bin_sh") == 0){
+else if(strcmp(str, "linux86/binsh") == 0){
     usetxt=str;
     type = "shellcode";
 }
@@ -42,7 +42,7 @@ else if(strcmp(str, "linux86/reverse_tcp") == 0){
 
 // Linux x64
 
-else if(strcmp(str, "linux64/bin_sh") == 0){
+else if(strcmp(str, "linux64/binsh") == 0){
     usetxt=str;
     type = "shellcode";
 }
@@ -65,7 +65,7 @@ else if(strcmp(str, "linux64/reverse_tcp") == 0){
 
 // Linux x86_64
 
-else if(strcmp(str, "linux/bin_sh") == 0){
+else if(strcmp(str, "linux/binsh") == 0){
     usetxt=str;
     type = "shellcode";
 }

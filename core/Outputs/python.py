@@ -15,8 +15,8 @@ def PyFile( shellcode):
 import ctypes
 import multiprocessing
 
-#Project : https://github.com/b3mb4m/Shellsploit
-#This file created with shellsploit ..
+#Project : https://github.com/roissy
+#This file created with l0l ..
 #{0} - {1}
 
 

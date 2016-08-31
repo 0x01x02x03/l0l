@@ -25,7 +25,7 @@
             }
         }
 
-        else if(modulen == "linux86/bin_sh")
+        else if(modulen == "linux86/binsh")
         {
             genshellcode(4, "linux_x86", "bin_sh", args1, args2);
         }
@@ -85,7 +85,7 @@
 
         // Linux 64
 
-        else if(modulen == "linux64/bin_sh")
+        else if(modulen == "linux64/binsh")
         {
             genshellcode(4, "linux_x64", "bin_sh", args1, args2);
         }
@@ -131,7 +131,7 @@
 
         // Linux x86_64
 
-        else if(modulen == "linux/bin_sh")
+        else if(modulen == "linux/binsh")
         {
             genshellcode(4, "linux", "bin_sh", args1, args2);
         }

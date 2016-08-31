@@ -29,7 +29,7 @@ void shellcodeList(){
             "\t===========\n\n"
             "\t\tlinux86/exec\n"
             "\t\tlinux86/download&execute\n"
-            "\t\tlinux86/bin_sh\n"
+            "\t\tlinux86/binsh\n"
             "\t\tlinux86/read\n"
             "\t\tlinux86/chmod\n"
             "\t\tlinux86/tcp_bind\n"
@@ -39,7 +39,7 @@ void shellcodeList(){
     cout <<
             "\n\tLinux x64\n"
             "\t===========\n\n"
-            "\t\tlinux64/bin_sh\n"
+            "\t\tlinux64/binsh\n"
             "\t\tlinux64/read\n"
             "\t\tlinux64/tcp_bind\n"
             "\t\tlinux64/reverse_tcp\n\n";
@@ -48,7 +48,7 @@ void shellcodeList(){
     cout <<
             "\n\tLinux x86/x64 [Works on both]\n"
             "\t===========\n\n"
-            "\t\tlinux/bin_sh\n"
+            "\t\tlinux/binsh\n"
             "\t\tlinux/read\n"
             "\t\tlinux/tcp_bind\n"
             "\t\tlinux/reverse_tcp\n\n";

@@ -7,6 +7,7 @@
 #------------------------------------------------------------------#
 
 from header import *
+import time
 
 DLL_TEMPLATE = """/**
  * C source to generate a DLL using l0l.

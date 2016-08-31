@@ -83,3 +83,131 @@ void genshellcode(int argp, string os, string type, string a1, string a2)
 
 
 }
+
+void output(int argp, string outype, string os, string type, string a1, string a2)
+{
+
+    /*
+
+     CFile(SHELLCODE)
+
+     CplusplusFile(SHELLCODE, win=False,True)
+
+     TxtFile(SHELLCODE)
+
+     RawFile(SHELLCODE)
+
+     PyFile(SHELLCODE)
+
+     DllFile(SHELLCODE)
+
+
+     ExeFile(SHELLCODE, OS="windows")
+
+     OS List =>
+
+
+     linux64
+
+     windows
+
+     openbsdx86
+
+     solarisx86
+
+     linuxpowerpc
+
+     openbsdpowerpc
+
+     linuxsparc
+
+     freebsdsparc
+
+     opensbdsparc
+
+     solarissparc
+
+     linuxarm
+
+     freebsdarm
+
+     opensbdarm
+
+
+
+
+
+    */
+
+
+
+
+
+    string session;
+
+    session="from core.database.generator import *\n"
+            "from core.Outputs.C import *\n"
+            "from core.Outputs.Cplusplus import *\n"
+            "from core.Outputs.Dll import *\n"
+            "from core.Outputs.exe import *\n"
+            "from core.Outputs.python import *\n"
+            "from core.Outputs.txt import *\n\n";
+
+    session += "input = \"";
+    session += a1;
+    session += "\"\n";
+    session += "os = \"";
+    session += os;
+    session += "\"\n";
+    session += "shelltype = \"";
+    session += type;
+    session += "\"\n\n";
+
+    if( argp == 1 ){
+        session += "shellcode = generator( os, shelltype, input)\n";
+    }
+    else if( argp == 2 ){
+
+        session += "input2 = \"";
+        session += a2;
+        session += "\"\n";
+
+        session += "shellcode = generator( os, shelltype, input, input2)\n";
+
+    }
+    else if( argp == 3 ){
+
+        session += "input2 = \"";
+        session += a2;
+        session += "\"\n";
+        session += "shellcode = generator( os, shelltype, argv=input, argv2=input2)\n";
+
+    }
+    else if( argp == 4 ){
+
+        session += "shellcode = generator( os, shelltype )\n";
+
+    }
+
+
+
+
+    char filename[] = "session.py";
+    std::ofstream outfile (filename);
+    outfile << session;
+    outfile.close();
+
+    cout << "\n";
+
+    #ifdef OS_Windows
+        system("python session.py");
+    #else
+        system("python2 session.py");
+    #endif
+
+
+    cout << "\n";
+    remove("session.py");
+
+
+}

@@ -94,6 +94,13 @@ do{
         // Include generate command .assets...
         #include "generate.cpp"
     }
+    else if(strcmp(usecmd, "output") == 0){
+        // Shellcode output command ..
+
+
+
+    }
+
     else{
         // Set Red Color
         rlutil::setColor(12);

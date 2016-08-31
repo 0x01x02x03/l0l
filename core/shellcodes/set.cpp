@@ -10,7 +10,7 @@
             {
                 str3 = shorter(str2,8);
                 args1 = str3;
-                cout << "\ncommand -> " << str3 << "\n\n";
+                cout << "\ncommand => " << str3 << "\n\n";
             }
             else{
                 rlutil::setColor(12);
@@ -24,7 +24,7 @@
             if( str2[0] == 'l' && str2[1] == 'i' && str2[2] == 'n' && str2[3] == 'k' && str2[4] == ' ' ){
                 str3 = shorter(str2,5);
                 args1 = str3;
-                cout << "\nlink -> " << str3 << "\n\n";
+                cout << "\nlink => " << str3 << "\n\n";
 
             }
             else{
@@ -40,7 +40,7 @@
             {
                 str3 = shorter(str2,5);
                 args1 = str3;
-                cout << "\nfile -> " << str3 << "\n\n";
+                cout << "\nfile => " << str3 << "\n\n";
             }
             else{
                 rlutil::setColor(12);
@@ -54,7 +54,7 @@
             {
                 str3 = shorter(str2,5);
                 args1 = str3;
-                cout << "\nfile -> " << str3 << "\n\n";
+                cout << "\nfile => " << str3 << "\n\n";
             }
             else{
                 rlutil::setColor(12);
@@ -89,7 +89,7 @@
                     }
                     else{
                         args1 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                     }
@@ -116,7 +116,7 @@
 
                 if(isValidIpAddress(str4)){
                     args1 = str3;
-                    cout << "\nhost -> " << str3 << "\n\n";
+                    cout << "\nhost => " << str3 << "\n\n";
                 }
                 else{
                     printf("\nThe given IP is not a valid IP address..\n\n");
@@ -144,7 +144,7 @@
                     }
                     else{
                         args2 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                 }
@@ -169,7 +169,7 @@
             {
                 str3 = shorter(str2,5);
                 args1 = str3;
-                cout << "\nfile -> " << str3 << "\n\n";
+                cout << "\nfile => " << str3 << "\n\n";
             }
             else{
                 rlutil::setColor(12);
@@ -204,7 +204,7 @@
                     }
                     else{
                         args1 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                     }
@@ -231,7 +231,7 @@
 
                 if(isValidIpAddress(str4)){
                     args1 = str3;
-                    cout << "\nhost -> " << str3 << "\n\n";
+                    cout << "\nhost => " << str3 << "\n\n";
                 }
                 else{
                     printf("\nThe given IP is not a valid IP address..\n\n");
@@ -259,7 +259,7 @@
                     }
                     else{
                         args2 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                 }
@@ -284,7 +284,7 @@
             {
                 str3 = shorter(str2,5);
                 args1 = str3;
-                cout << "\nfile -> " << str3 << "\n\n";
+                cout << "\nfile => " << str3 << "\n\n";
             }
             else{
                 rlutil::setColor(12);
@@ -319,7 +319,7 @@
                     }
                     else{
                         args1 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                     }
@@ -346,7 +346,7 @@
 
                 if(isValidIpAddress(str4)){
                     args1 = str3;
-                    cout << "\nhost -> " << str3 << "\n\n";
+                    cout << "\nhost => " << str3 << "\n\n";
                 }
                 else{
                     printf("\nThe given IP is not a valid IP address..\n\n");
@@ -374,7 +374,7 @@
                     }
                     else{
                         args2 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                 }
@@ -399,7 +399,7 @@
             {
                 str3 = shorter(str2,8);
                 args1 = str3;
-                cout << "\ncommand -> " << str3 << "\n\n";
+                cout << "\ncommand => " << str3 << "\n\n";
             }
             else{
                 rlutil::setColor(12);
@@ -413,7 +413,7 @@
             {
                 str3 = shorter(str2,5);
                 args1 = str3;
-                cout << "\nfile -> " << str3 << "\n\n";
+                cout << "\nfile => " << str3 << "\n\n";
             }
             else{
                 rlutil::setColor(12);
@@ -433,7 +433,7 @@
 
                 if(isValidIpAddress(str4)){
                     args1 = str3;
-                    cout << "\nhost -> " << str3 << "\n\n";
+                    cout << "\nhost => " << str3 << "\n\n";
                 }
                 else{
                     printf("\nThe given IP is not a valid IP address..\n\n");
@@ -461,7 +461,7 @@
                     }
                     else{
                         args2 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                 }
@@ -486,7 +486,7 @@
             {
                 str3 = shorter(str2,5);
                 args1 = str3;
-                cout << "\nfile -> " << str3 << "\n\n";
+                cout << "\nfile => " << str3 << "\n\n";
             }
             else{
                 rlutil::setColor(12);
@@ -522,7 +522,7 @@
                     }
                     else{
                         args1 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                     }
@@ -545,7 +545,7 @@
             {
                 str3 = shorter(str2,5);
                 args1 = str3;
-                cout << "\nfile -> " << str3 << "\n\n";
+                cout << "\nfile => " << str3 << "\n\n";
             }
             else{
                 rlutil::setColor(12);
@@ -565,7 +565,7 @@
 
                 if(isValidIpAddress(str4)){
                     args1 = str3;
-                    cout << "\nhost -> " << str3 << "\n\n";
+                    cout << "\nhost => " << str3 << "\n\n";
                 }
                 else{
                     printf("\nThe given IP is not a valid IP address..\n\n");
@@ -593,7 +593,7 @@
                     }
                     else{
                         args2 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                 }
@@ -637,7 +637,7 @@
                     }
                     else{
                         args1 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                     }
@@ -660,7 +660,7 @@
             {
                 str3 = shorter(str2,8);
                 args1 = str3;
-                cout << "\ncommand -> " << str3 << "\n\n";
+                cout << "\ncommand => " << str3 << "\n\n";
             }
             else{
                 rlutil::setColor(12);
@@ -674,7 +674,7 @@
             if( str2[0] == 'm' && str2[1] == 'e' && str2[2] == 's' && str2[3] == 's' && str2[4] == 'a' && str2[5] == 'g' && str2[6] == 'e' && str2[7] == ' ' ){
                 str3 = shorter(str2,8);
                 args1 = str3;
-                cout << "\nmessage-> " << str3 << "\n\n";
+                cout << "\nmessage => " << str3 << "\n\n";
 
             }
             else{
@@ -690,7 +690,7 @@
             if( str2[0] == 'l' && str2[1] == 'i' && str2[2] == 'n' && str2[3] == 'k' && str2[4] == ' ' ){
                 str3 = shorter(str2,5);
                 args1 = str3;
-                cout << "\nlink -> " << str3 << "\n\n";
+                cout << "\nlink => " << str3 << "\n\n";
 
             }
             else{
@@ -712,7 +712,7 @@
 
                 if(isValidIpAddress(str4)){
                     args1 = str3;
-                    cout << "\nhost -> " << str3 << "\n\n";
+                    cout << "\nhost => " << str3 << "\n\n";
                 }
                 else{
                     printf("\nThe given IP is not a valid IP address..\n\n");
@@ -740,7 +740,7 @@
                     }
                     else{
                         args2 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                 }
@@ -784,7 +784,7 @@
                     }
                     else{
                         args1 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                     }
@@ -813,7 +813,7 @@
 
                 if(isValidIpAddress(str4)){
                     args1 = str3;
-                    cout << "\nhost -> " << str3 << "\n\n";
+                    cout << "\nhost => " << str3 << "\n\n";
                 }
                 else{
                     printf("\nThe given IP is not a valid IP address..\n\n");
@@ -841,7 +841,7 @@
                     }
                     else{
                         args2 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                 }
@@ -885,7 +885,7 @@
                     }
                     else{
                         args1 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                     }
@@ -914,7 +914,7 @@
 
                 if(isValidIpAddress(str4)){
                     args1 = str3;
-                    cout << "\nhost -> " << str3 << "\n\n";
+                    cout << "\nhost => " << str3 << "\n\n";
                 }
                 else{
                     printf("\nThe given IP is not a valid IP address..\n\n");
@@ -942,7 +942,7 @@
                     }
                     else{
                         args2 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                 }
@@ -986,7 +986,7 @@
                     }
                     else{
                         args1 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                     }
@@ -1009,7 +1009,7 @@
             {
                 str3 = shorter(str2,5);
                 args1 = str3;
-                cout << "\nfile -> " << str3 << "\n\n";
+                cout << "\nfile => " << str3 << "\n\n";
             }
             else{
                 rlutil::setColor(12);
@@ -1044,7 +1044,7 @@
                     }
                     else{
                         args1 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                     }
@@ -1071,7 +1071,7 @@
 
                 if(isValidIpAddress(str4)){
                     args1 = str3;
-                    cout << "\nhost -> " << str3 << "\n\n";
+                    cout << "\nhost => " << str3 << "\n\n";
                 }
                 else{
                     printf("\nThe given IP is not a valid IP address..\n\n");
@@ -1099,7 +1099,7 @@
                     }
                     else{
                         args2 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                 }
@@ -1128,7 +1128,7 @@
 
                 if(isValidIpAddress(str4)){
                     args1 = str3;
-                    cout << "\nhost -> " << str3 << "\n\n";
+                    cout << "\nhost => " << str3 << "\n\n";
                 }
                 else{
                     printf("\nThe given IP is not a valid IP address..\n\n");
@@ -1156,7 +1156,7 @@
                     }
                     else{
                         args2 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                 }
@@ -1179,7 +1179,7 @@
             {
                 str3 = shorter(str2,8);
                 args1 = str3;
-                cout << "\ncommand -> " << str3 << "\n\n";
+                cout << "\ncommand => " << str3 << "\n\n";
             }
             else{
                 rlutil::setColor(12);
@@ -1216,7 +1216,7 @@
                     }
                     else{
                         args1 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                     }
@@ -1243,7 +1243,7 @@
 
                 if(isValidIpAddress(str4)){
                     args1 = str3;
-                    cout << "\nhost -> " << str3 << "\n\n";
+                    cout << "\nhost => " << str3 << "\n\n";
                 }
                 else{
                     printf("\nThe given IP is not a valid IP address..\n\n");
@@ -1271,7 +1271,7 @@
                     }
                     else{
                         args2 = str3;
-                        cout << "\nport -> " << str3 << "\n\n";
+                        cout << "\nport => " << str3 << "\n\n";
                     }
 
                 }
@@ -1294,7 +1294,7 @@
             {
                 str3 = shorter(str2,8);
                 args1 = str3;
-                cout << "\ncommand -> " << str3 << "\n\n";
+                cout << "\ncommand => " << str3 << "\n\n";
             }
             else{
                 rlutil::setColor(12);

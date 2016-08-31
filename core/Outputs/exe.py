@@ -53,5 +53,5 @@ def ExeFile( shellcode, OS=None):
     shellcode = shellcode.replace("\\x", "")
 
     shellcode = padd.replace("SHELLCODE", shellcode)
-    logs( shellcode.decode("hex"), None, kakaos="windows")
+    logs( shellcode.decode("hex"), None, OS)
 

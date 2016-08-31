@@ -6,6 +6,7 @@
 #LICENSE : https://github.com/roissy/l0l/blob/master/LICENSE
 #------------------------------------------------------------------#
 
+import time
 from header import *
 
 def CFile( shellcode):

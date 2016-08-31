@@ -1,13 +1,14 @@
 # Test
 
-from .generator import *
+from core.database.generator import *
 
-from raw import *
-
-shellcode = generator( "windows", "messagebox", "aadsfasd")
-
-#ExeFile(shellcode, "windows")
+from core.Outputs.exe import *
 
 
+shellcode = generator( "windows", "messagebox", "asdasdyrkrykrk")
 
-RawFile(shellcode)
+ExeFile(shellcode, "windows")
+
+
+
+#RawFile(shellcode)

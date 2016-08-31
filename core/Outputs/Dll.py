@@ -6,8 +6,8 @@
 #LICENSE : https://github.com/roissy/l0l/blob/master/LICENSE
 #------------------------------------------------------------------#
 
-from header import *
 import time
+from header import *
 
 DLL_TEMPLATE = """/**
  * C source to generate a DLL using l0l.

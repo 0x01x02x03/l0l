@@ -95,7 +95,7 @@ do{
 
                 if(isValidIpAddress(str4)){
                     lhost = str3;
-                    cout << "\nLHOST -> " << str3 << "\n\n";
+                    cout << "\nLHOST => " << str3 << "\n\n";
                 }
                 else{
                     printf("\nThe given IP is not a valid IP address..\n\n");
@@ -124,7 +124,7 @@ do{
                 }
                 else{
                     lport = str3;
-                    cout << "\nLPORT -> " << str3 << "\n\n";
+                    cout << "\nLPORT => " << str3 << "\n\n";
                 }
 
             }

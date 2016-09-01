@@ -57,7 +57,7 @@ void genshellcode(int argp, string os, string type, string a1, string a2)
                         "\tfor k in range(len(j)):\n"
                             "\t\tline += \"\\\\\"+j[k]\n"
                         "\tif p != loplop:\n"
-                            "\t\tprint '\t\"'+line+'\"+'\n"
+                            "\t\tprint '\t\"'+line+'\" +'\n"
                         "\telse:\n"
                             "\t\tprint '\t\"'+line+'\";'\n"
                         "\tx += 15\n"
@@ -88,6 +88,26 @@ void output(int argp, string outype, string os, string type, string a1, string a
 {
 
     /*
+
+    Output Types :
+
+    Extension ..
+
+    c
+
+    cpp, cpp windows
+
+    txt
+
+    raw
+
+    python
+
+    dll
+
+
+
+    Output functions ->
 
      CFile(SHELLCODE)
 
@@ -133,15 +153,7 @@ void output(int argp, string outype, string os, string type, string a1, string a
 
      opensbdarm
 
-
-
-
-
     */
-
-
-
-
 
     string session;
 
@@ -185,12 +197,222 @@ void output(int argp, string outype, string os, string type, string a1, string a
     }
     else if( argp == 4 ){
 
-        session += "shellcode = generator( os, shelltype )\n";
+        session += "shellcode = generator( os, shelltype )\n\n";
 
     }
 
 
+    if( os == "linux_x86" ){
 
+        if( outype == "exe" ){
+            session += "ExeFile( shellcode, OS=\"";
+            session += os;
+            session += "\")\n";
+        }
+        else{
+
+            if( outype == "c" ){  session += "CFile( shellcode )\n"; }
+            else if( outype == "cpp" ){  session += "CplusplusFile( shellcode, win=False)\n"; }
+            else if( outype == "txt" ){  session += "TxtFile( shellcode )\n"; }
+            else if( outype == "raw" ){  session += "RawFile( shellcode )\n"; }
+            else if( outype == "py" ){  session += "PyFile( shellcode )\n"; }
+
+        }
+
+    }
+
+    else if( os == "linux_x64" ){
+
+        if( outype == "exe" ){
+            session += "ExeFile( shellcode, OS=\"";
+            session += os;
+            session += "\")\n";
+        }
+        else{
+
+            if( outype == "c" ){  session += "CFile( shellcode )\n"; }
+            else if( outype == "cpp" ){  session += "CplusplusFile( shellcode, win=False)\n"; }
+            else if( outype == "txt" ){  session += "TxtFile( shellcode )\n"; }
+            else if( outype == "raw" ){  session += "RawFile( shellcode )\n"; }
+            else if( outype == "py" ){  session += "PyFile( shellcode )\n"; }
+
+        }
+
+    }
+
+    else if( os == "linux" ){
+
+        if( outype == "exe" ){
+            session += "ExeFile( shellcode, OS=\"";
+            session += os;
+            session += "\")\n";
+        }
+        else{
+
+            if( outype == "c" ){  session += "CFile( shellcode )\n"; }
+            else if( outype == "cpp" ){  session += "CplusplusFile( shellcode, win=False)\n"; }
+            else if( outype == "txt" ){  session += "TxtFile( shellcode )\n"; }
+            else if( outype == "raw" ){  session += "RawFile( shellcode )\n"; }
+            else if( outype == "py" ){  session += "PyFile( shellcode )\n"; }
+
+        }
+
+    }
+
+    else if( os == "linux_arm" ){
+
+        if( outype == "exe" ){
+            session += "ExeFile( shellcode, OS=\"";
+            session += os;
+            session += "\")\n";
+        }
+        else{
+
+            if( outype == "c" ){  session += "CFile( shellcode )\n"; }
+            else if( outype == "cpp" ){  session += "CplusplusFile( shellcode, win=False)\n"; }
+            else if( outype == "txt" ){  session += "TxtFile( shellcode )\n"; }
+            else if( outype == "raw" ){  session += "RawFile( shellcode )\n"; }
+            else if( outype == "py" ){  session += "PyFile( shellcode )\n"; }
+
+        }
+
+    }
+
+    else if( os == "linux_mips" ){
+
+        if( outype == "exe" ){
+            session += "ExeFile( shellcode, OS=\"";
+            session += os;
+            session += "\")\n";
+        }
+        else{
+
+            if( outype == "c" ){  session += "CFile( shellcode )\n"; }
+            else if( outype == "cpp" ){  session += "CplusplusFile( shellcode, win=False)\n"; }
+            else if( outype == "txt" ){  session += "TxtFile( shellcode )\n"; }
+            else if( outype == "raw" ){  session += "RawFile( shellcode )\n"; }
+            else if( outype == "py" ){  session += "PyFile( shellcode )\n"; }
+
+        }
+
+    }
+
+    else if( os == "osx86" ){
+
+        if( outype == "exe" ){
+            session += "ExeFile( shellcode, OS=\"";
+            session += os;
+            session += "\")\n";
+        }
+        else{
+
+            if( outype == "c" ){  session += "CFile( shellcode )\n"; }
+            else if( outype == "cpp" ){  session += "CplusplusFile( shellcode, win=False)\n"; }
+            else if( outype == "txt" ){  session += "TxtFile( shellcode )\n"; }
+            else if( outype == "raw" ){  session += "RawFile( shellcode )\n"; }
+            else if( outype == "py" ){  session += "PyFile( shellcode )\n"; }
+
+        }
+
+    }
+
+    else if( os == "osx64" ){
+
+        if( outype == "exe" ){
+            session += "ExeFile( shellcode, OS=\"";
+            session += os;
+            session += "\")\n";
+        }
+        else{
+
+            if( outype == "c" ){  session += "CFile( shellcode )\n"; }
+            else if( outype == "cpp" ){  session += "CplusplusFile( shellcode, win=False)\n"; }
+            else if( outype == "txt" ){  session += "TxtFile( shellcode )\n"; }
+            else if( outype == "raw" ){  session += "RawFile( shellcode )\n"; }
+            else if( outype == "py" ){  session += "PyFile( shellcode )\n"; }
+
+        }
+
+    }
+
+    else if( os == "freebsd_x86" ){
+
+        if( outype == "exe" ){
+            session += "ExeFile( shellcode, OS=\"";
+            session += os;
+            session += "\")\n";
+        }
+        else{
+
+            if( outype == "c" ){  session += "CFile( shellcode )\n"; }
+            else if( outype == "cpp" ){  session += "CplusplusFile( shellcode, win=False)\n"; }
+            else if( outype == "txt" ){  session += "TxtFile( shellcode )\n"; }
+            else if( outype == "raw" ){  session += "RawFile( shellcode )\n"; }
+            else if( outype == "py" ){  session += "PyFile( shellcode )\n"; }
+
+        }
+
+    }
+
+    else if( os == "freebsd_x64" ){
+
+        if( outype == "exe" ){
+            session += "ExeFile( shellcode, OS=\"";
+            session += os;
+            session += "\")\n";
+        }
+        else{
+
+            if( outype == "c" ){  session += "CFile( shellcode )\n"; }
+            else if( outype == "cpp" ){  session += "CplusplusFile( shellcode, win=False)\n"; }
+            else if( outype == "txt" ){  session += "TxtFile( shellcode )\n"; }
+            else if( outype == "raw" ){  session += "RawFile( shellcode )\n"; }
+            else if( outype == "py" ){  session += "PyFile( shellcode )\n"; }
+
+        }
+
+    }
+
+    else if( os == "windows" ){
+
+        if( outype == "exe" ){
+            session += "ExeFile( shellcode, OS=\"";
+            session += os;
+            session += "\")\n";
+        }
+        else{
+
+            if( outype == "c" ){  session += "CFile( shellcode )\n"; }
+            else if( outype == "cpp" ){  session += "CplusplusFile( shellcode, win=False)\n"; }
+            else if( outype == "txt" ){  session += "TxtFile( shellcode )\n"; }
+            else if( outype == "raw" ){  session += "RawFile( shellcode )\n"; }
+            else if( outype == "py" ){  session += "PyFile( shellcode )\n"; }
+
+            //..
+        }
+
+    }
+
+    else if( os == "solarisx86" ){
+
+        if( outype == "exe" ){
+            session += "ExeFile( shellcode, OS=\"";
+            session += os;
+            session += "\")\n";
+        }
+        else{
+
+            if( outype == "c" ){  session += "CFile( shellcode )\n"; }
+            else if( outype == "cpp" ){  session += "CplusplusFile( shellcode, win=False)\n"; }
+            else if( outype == "txt" ){  session += "TxtFile( shellcode )\n"; }
+            else if( outype == "raw" ){  session += "RawFile( shellcode )\n"; }
+            else if( outype == "py" ){  session += "PyFile( shellcode )\n"; }
+
+        }
+
+    }
+
+    rlutil::setColor(2);
 
     char filename[] = "session.py";
     std::ofstream outfile (filename);

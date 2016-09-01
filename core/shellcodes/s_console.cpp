@@ -96,7 +96,7 @@ do{
     }
     else if(strcmp(usecmd, "output") == 0){
         // Shellcode output command ..
-
+        output(1, "py", "linux_x86", "exec", args1, args2);
 
 
     }

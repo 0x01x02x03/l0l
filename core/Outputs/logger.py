@@ -15,6 +15,17 @@ def logs(  data=None, extension=None, kakaos=None):
             name = "{0}".format(str(randint(0, 999999999)))
             if kakaos == "windows":
                 name+=".exe"
+	    if kakaos == "linux":
+        	name+=".elf"
+            if kakaos == "linux_x86":
+		name+=".elf"
+	    if kakaos == "linux_x64":
+		name+=".elf"
+	    if kakaos == "linux_arm":
+                name+=".elf"
+	    if kakaos == "linux_mips":
+                name+=".elf"
+			
         else:
             name = "{0}.{1}".format(str(randint(0, 999999999)),extension)
 

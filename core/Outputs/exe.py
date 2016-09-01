@@ -16,9 +16,9 @@ def ExeFile( shellcode, OS=None):
 
     db = ros()
     padd = ""
-    if OS == "linux86":
+    if OS == "linux_x86":
         padd = db[0]
-    elif OS == "linux64":
+    elif OS == "linux_x64":
        padd = db[1]
     elif OS == "windows":
        padd = db[2]
@@ -38,7 +38,7 @@ def ExeFile( shellcode, OS=None):
         padd = db[9]
     elif OS == "solarissparc":
         padd = db[10]
-    elif OS == "linuxarm":
+    elif OS == "linux_arm":
         padd = db[11]
     elif OS == "freebsdarm":  
         padd = db[12]
@@ -48,10 +48,7 @@ def ExeFile( shellcode, OS=None):
         print "Not supported os .."
         return
 
-
-
     shellcode = shellcode.replace("\\x", "")
-
     shellcode = padd.replace("SHELLCODE", shellcode)
     logs( shellcode.decode("hex"), None, OS)
 

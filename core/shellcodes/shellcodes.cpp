@@ -183,7 +183,6 @@ void output(int argp, string outype, string os, string type, string a1, string a
         session += "input2 = \"";
         session += a2;
         session += "\"\n";
-
         session += "shellcode = generator( os, shelltype, input, input2)\n";
 
     }
@@ -387,6 +386,7 @@ void output(int argp, string outype, string os, string type, string a1, string a
             else if( outype == "txt" ){  session += "TxtFile( shellcode )\n"; }
             else if( outype == "raw" ){  session += "RawFile( shellcode )\n"; }
             else if( outype == "py" ){  session += "PyFile( shellcode )\n"; }
+            else if( outype == "dll" ){  session += "DllFile( shellcode )\n"; }
 
             //..
         }

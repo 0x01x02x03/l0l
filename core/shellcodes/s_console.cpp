@@ -96,7 +96,55 @@ do{
     }
     else if(strcmp(usecmd, "output") == 0){
         // Shellcode output command ..
-        output(1, "py", "linux_x86", "exec", args1, args2);
+        //output(1, "exe", "solarisx86", "exec", args1, args2);
+
+        str2 = shorter(usecmd2,7);
+
+
+        if( oskaka == "linux_x86" ){
+
+
+        }
+        else if( oskaka == "linux_x64" ){
+
+
+        }
+        else if( oskaka == "linux" ){
+
+
+        }
+        else if( oskaka == "linux_arm" ){
+
+
+        }
+        else if( oskaka == "linux_mips" ){
+
+
+        }
+        else if( oskaka == "solarisx86" ){
+
+
+        }
+        else if( oskaka == "windows" ){
+
+
+        }
+        else if( oskaka == "osx86" ){
+
+
+        }
+        else if( oskaka == "osx64" ){
+
+
+        }
+        else if( oskaka == "freebsd_x86" ){
+
+
+        }
+        else if( oskaka == "freebsd_x64" ){
+
+
+        }
 
 
     }

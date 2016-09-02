@@ -1,4 +1,4 @@
-string usetxt, type;
+string usetxt, type, oskaka;
 
 str =  shorter(command,4);
 
@@ -22,6 +22,7 @@ else{
     }
 
     // Shellcode Modules
+
     #include "shellcodes/s_modules.cpp"
 
     // Backdoor Modules

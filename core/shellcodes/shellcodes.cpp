@@ -57,7 +57,7 @@ void genshellcode(int argp, string os, string type, string a1, string a2)
                         "\tfor k in range(len(j)):\n"
                             "\t\tline += \"\\\\\"+j[k]\n"
                         "\tif p != loplop:\n"
-                            "\t\tprint '\t\"'+line+'\" +'\n"
+                            "\t\tprint '\t\"'+line+'\"+'\n"
                         "\telse:\n"
                             "\t\tprint '\t\"'+line+'\";'\n"
                         "\tx += 15\n"

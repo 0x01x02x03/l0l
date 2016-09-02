@@ -94,22 +94,370 @@ do{
         // Include generate command .assets...
         #include "generate.cpp"
     }
-    else if(strcmp(usecmd, "output") == 0){
+    else if(strcmp(usecmd2, "output") == 0){
         // Shellcode output command ..
         //output(1, "exe", "solarisx86", "exec", args1, args2);
 
         str2 = shorter(usecmd2,7);
 
-
         if( oskaka == "linux_x86" ){
 
+            // Linux x86
+
+            if(modulen == "linux86/exec")
+            {
+                if(args1 == "None"){
+                    cout << "\nSet option before output shellcode.\n\n";
+                }
+                else{
+
+                    if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                        output(1, "exe", "linux_x86", "exec", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == '\0')
+                        output(1, "c", "linux_x86", "exec", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                        output(1, "cpp", "linux_x86", "exec", args1, args2);
+                    else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                        output(1, "txt", "linux_x86", "exec", args1, args2);
+                    else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                        output(1, "raw", "linux_x86", "exec", args1, args2);
+                    else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                        output(1, "py", "linux_x86", "exec", args1, args2);
+
+                }
+
+            }
+
+            else if(modulen == "linux86/download&execute")
+            {
+                if(args1 == "None"){
+                    cout << "\nSet option before output shellcode.\n\n";
+                }
+                else{
+
+                    if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                        output(3, "exe", "linux_x86", "download&exec", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == '\0')
+                        output(3, "c", "linux_x86", "download&exec", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                        output(3, "cpp", "linux_x86", "download&exec", args1, args2);
+                    else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                        output(3, "txt", "linux_x86", "download&exec", args1, args2);
+                    else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                        output(3, "raw", "linux_x86", "download&exec", args1, args2);
+                    else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                        output(3, "py", "linux_x86", "download&exec", args1, args2);
+
+                }
+            }
+
+            else if(modulen == "linux86/binsh")
+            {
+
+                if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                    output(4, "exe", "linux_x86", "bin_sh", args1, args2);
+                else if(str2[0] == 'c' && str2[1] == '\0')
+                    output(4, "c", "linux_x86", "bin_sh", args1, args2);
+                else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                    output(4, "cpp", "linux_x86", "bin_sh", args1, args2);
+                else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                    output(4, "txt", "linux_x86", "bin_sh", args1, args2);
+                else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                    output(4, "raw", "linux_x86", "bin_sh", args1, args2);
+                else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                    output(4, "py", "linux_x86", "bin_sh", args1, args2);
+
+            }
+
+            else if(modulen == "linux86/read")
+            {
+                if(args1 == "None"){
+                    cout << "\nSet option before output shellcode.\n\n";
+                }
+                else{
+
+                    if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                        output(1, "exe", "linux_x86", "read", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == '\0')
+                        output(1, "c", "linux_x86", "read", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                        output(1, "cpp", "linux_x86", "read", args1, args2);
+                    else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                        output(1, "txt", "linux_x86", "read", args1, args2);
+                    else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                        output(1, "raw", "linux_x86", "read", args1, args2);
+                    else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                        output(1, "py", "linux_x86", "read", args1, args2);
+
+                }
+
+            }
+
+            else if(modulen == "linux86/chmod")
+            {
+                if(args1 == "None"){
+                    cout << "\nSet option before output shellcode.\n\n";
+                }
+                else{
+
+                    if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                        output(1, "exe", "linux_x86", "chmod", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == '\0')
+                        output(1, "c", "linux_x86", "chmod", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                        output(1, "cpp", "linux_x86", "chmod", args1, args2);
+                    else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                        output(1, "txt", "linux_x86", "chmod", args1, args2);
+                    else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                        output(1, "raw", "linux_x86", "chmod", args1, args2);
+                    else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                        output(1, "py", "linux_x86", "chmod", args1, args2);
+
+                }
+
+            }
+
+            else if(modulen == "linux86/tcp_bind")
+            {
+                if(args1 == "None"){
+                    cout << "\nSet option before output shellcode.\n\n";
+                }
+                else{
+
+                    if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                        output(1, "exe", "linux_x86", "tcp_bind", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == '\0')
+                        output(1, "c", "linux_x86", "tcp_bind", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                        output(1, "cpp", "linux_x86", "tcp_bind", args1, args2);
+                    else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                        output(1, "txt", "linux_x86", "tcp_bind", args1, args2);
+                    else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                        output(1, "raw", "linux_x86", "tcp_bind", args1, args2);
+                    else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                        output(1, "py", "linux_x86", "tcp_bind", args1, args2);
+
+                }
+
+            }
+
+            else if(modulen == "linux86/reverse_tcp")
+            {
+                if(args1 == "None" || args2 == "None"){
+                    cout << "\nSet option before output shellcode.\n\n";
+                }
+                else{
+
+                    if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                        output(2, "exe", "linux_x86", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == '\0')
+                        output(2, "c", "linux_x86", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                        output(2, "cpp", "linux_x86", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                        output(2, "txt", "linux_x86", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                        output(2, "raw", "linux_x86", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                        output(2, "py", "linux_x86", "reverse_tcp", args1, args2);
+
+                }
+
+            }
 
         }
+
         else if( oskaka == "linux_x64" ){
 
+            // Linux x64
+
+            if(modulen == "linux64/binsh")
+            {
+
+                if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                    output(4, "exe", "linux_x64", "bin_sh", args1, args2);
+                else if(str2[0] == 'c' && str2[1] == '\0')
+                    output(4, "c", "linux_x64", "bin_sh", args1, args2);
+                else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                    output(4, "cpp", "linux_x64", "bin_sh", args1, args2);
+                else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                    output(4, "txt", "linux_x64", "bin_sh", args1, args2);
+                else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                    output(4, "raw", "linux_x64", "bin_sh", args1, args2);
+                else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                    output(4, "py", "linux_x64", "bin_sh", args1, args2);
+
+            }
+
+            else if(modulen == "linux64/read")
+            {
+                if(args1 == "None"){
+                    cout << "\nSet option before output shellcode.\n\n";
+                }
+                else{
+
+                    if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                        output(1, "exe", "linux_x64", "read", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == '\0')
+                        output(1, "c", "linux_x64", "read", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                        output(1, "cpp", "linux_x64", "read", args1, args2);
+                    else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                        output(1, "txt", "linux_x64", "read", args1, args2);
+                    else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                        output(1, "raw", "linux_x64", "read", args1, args2);
+                    else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                        output(1, "py", "linux_x64", "read", args1, args2);
+
+                }
+
+            }
+
+
+            else if(modulen == "linux64/tcp_bind")
+            {
+                if(args1 == "None"){
+                    cout << "\nSet option before output shellcode.\n\n";
+                }
+                else{
+
+                    if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                        output(1, "exe", "linux_x64", "tcp_bind", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == '\0')
+                        output(1, "c", "linux_x64", "tcp_bind", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                        output(1, "cpp", "linux_x64", "tcp_bind", args1, args2);
+                    else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                        output(1, "txt", "linux_x64", "tcp_bind", args1, args2);
+                    else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                        output(1, "raw", "linux_x64", "tcp_bind", args1, args2);
+                    else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                        output(1, "py", "linux_x64", "tcp_bind", args1, args2);
+
+                }
+
+            }
+
+            else if(modulen == "linux64/reverse_tcp")
+            {
+                if(args1 == "None" || args2 == "None"){
+                    cout << "\nSet option before output shellcode.\n\n";
+                }
+                else{
+
+                    if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                        output(2, "exe", "linux_x64", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == '\0')
+                        output(2, "c", "linux_x64", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                        output(2, "cpp", "linux_x64", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                        output(2, "txt", "linux_x64", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                        output(2, "raw", "linux_x64", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                        output(2, "py", "linux_x64", "reverse_tcp", args1, args2);
+
+                }
+
+            }
 
         }
+
         else if( oskaka == "linux" ){
+
+            // Linux x86_64
+
+            if(modulen == "linux/binsh")
+            {
+
+                if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                    output(4, "exe", "linux", "bin_sh", args1, args2);
+                else if(str2[0] == 'c' && str2[1] == '\0')
+                    output(4, "c", "linux", "bin_sh", args1, args2);
+                else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                    output(4, "cpp", "linux", "bin_sh", args1, args2);
+                else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                    output(4, "txt", "linux", "bin_sh", args1, args2);
+                else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                    output(4, "raw", "linux", "bin_sh", args1, args2);
+                else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                    output(4, "py", "linux", "bin_sh", args1, args2);
+
+            }
+
+            else if(modulen == "linux/read")
+            {
+                if(args1 == "None"){
+                    cout << "\nSet option before output shellcode.\n\n";
+                }
+                else{
+
+                    if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                        output(1, "exe", "linux", "read", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == '\0')
+                        output(1, "c", "linux", "read", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                        output(1, "cpp", "linux", "read", args1, args2);
+                    else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                        output(1, "txt", "linux", "read", args1, args2);
+                    else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                        output(1, "raw", "linux", "read", args1, args2);
+                    else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                        output(1, "py", "linux", "read", args1, args2);
+
+                }
+
+            }
+
+
+            else if(modulen == "linux/tcp_bind")
+            {
+                if(args1 == "None"){
+                    cout << "\nSet option before output shellcode.\n\n";
+                }
+                else{
+
+                    if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                        output(1, "exe", "linux", "tcp_bind", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == '\0')
+                        output(1, "c", "linux", "tcp_bind", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                        output(1, "cpp", "linux", "tcp_bind", args1, args2);
+                    else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                        output(1, "txt", "linux", "tcp_bind", args1, args2);
+                    else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                        output(1, "raw", "linux", "tcp_bind", args1, args2);
+                    else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                        output(1, "py", "linux", "tcp_bind", args1, args2);
+
+                }
+
+            }
+
+            else if(modulen == "linux/reverse_tcp")
+            {
+                if(args1 == "None" || args2 == "None"){
+                    cout << "\nSet option before output shellcode.\n\n";
+                }
+                else{
+
+                    if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                        output(2, "exe", "linux", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == '\0')
+                        output(2, "c", "linux", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                        output(2, "cpp", "linux", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                        output(2, "txt", "linux", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                        output(2, "raw", "linux", "reverse_tcp", args1, args2);
+                    else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                        output(2, "py", "linux", "reverse_tcp", args1, args2);
+
+                }
+
+            }
 
 
         }

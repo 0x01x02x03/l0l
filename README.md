@@ -102,4 +102,4 @@ jabber : roissy@exploit.im
 
 ![alt tag](http://i.hizliresim.com/RQQBGn.png)
 
-![alt tag](http://i.hizliresim.com/RQQBGn.png)
+![alt tag](http://i.hizliresim.com/pEE92n.png)

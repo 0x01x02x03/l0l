@@ -762,6 +762,31 @@ do{
 
                 }
             }
+
+            else if(modulen == "windows/exec")
+            {
+                if(args1 == "None"){
+                    cout << "\nSet option before output shellcode.\n\n";
+                }
+                else{
+                    if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                        output(1, "exe", "windows", "exec", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == '\0')
+                        output(1, "c", "windows", "exec", args1, args2);
+                    else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                        output(1, "cpp", "windows", "exec", args1, args2);
+                    else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                        output(1, "txt", "windows", "exec", args1, args2);
+                    else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                        output(1, "raw", "windows", "exec", args1, args2);
+                    else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                        output(1, "py", "windows", "exec", args1, args2);
+                    else if(str2[0] == 'd' && str2[1] == 'l' && str2[2] == 'l' && str2[3] == '\0')
+                        output(1, "dll", "windows", "exec", args1, args2);
+
+                }
+            }
+
             else if(modulen == "windows/download&execute")
             {
                 if(args1 == "None"){

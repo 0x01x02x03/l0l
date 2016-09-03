@@ -483,7 +483,7 @@
             }
             else{
 
-                genshellcode(2, "freebsd_x86", "reverse_tcp", args2, args1);
+                genshellcode(2, "freebsd_x86", "reverse_tcp2", args2, args1);
 
             }
 

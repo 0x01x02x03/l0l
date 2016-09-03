@@ -88,6 +88,7 @@ void shellcodeHelp(){
             "\t    os       \t\tCommand directly ur computer\n"
             "\t    clear    \t\tClear the menu\n"
             "\t    generate \t\tGenerate shellcode\n"
+            "\t    output   \t\tShellcode Output Type\n"
             "\t    show options\tShow current options of selected module\n\n";
 
 }
@@ -156,6 +157,28 @@ void useCommand(){
             "\tUsage: use (Module)\n"
             "\tExp: use test\n\n"
             "To see the modules, use the show command.\n\n";
+
+}
+
+void outputCommand(){
+
+    // Set Green Color
+    rlutil::setColor(2);
+    cout <<
+            "\noutput Command\n"
+            "============\n"
+            "\tDescription: Shellcode Output Type.\n"
+            "\tUsage: output (Type)\n"
+            "\tExp: output cpp\n\n"
+            "Output Types\n"
+            "============\n"
+            "\texe\t: Executable File\n"
+            "\tc\t: C File\n"
+            "\tcpp\t: C++ File\n"
+            "\ttxt\t: Text File\n"
+            "\traw\t: Raw File\n"
+            "\tpy\t: Python File\n"
+            "\tdll\t: Dll Source (Windows)\n\n";
 
 }
 

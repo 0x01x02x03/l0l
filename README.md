@@ -64,6 +64,7 @@ jabber : roissy@exploit.im
 			os               :   Command directly ur computer
 			clear            :   Clear the menu
 			generate         :   Generate shellcode
+			output           :   Shellcode Output Type
 			show options     :   Show current options of selected module
 	
 	            

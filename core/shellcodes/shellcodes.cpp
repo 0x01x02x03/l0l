@@ -382,7 +382,7 @@ void output(int argp, string outype, string os, string type, string a1, string a
         else{
 
             if( outype == "c" ){  session += "CFile( shellcode )\n"; }
-            else if( outype == "cpp" ){  session += "CplusplusFile( shellcode, win=False)\n"; }
+            else if( outype == "cpp" ){  session += "CplusplusFile( shellcode, win=True)\n"; }
             else if( outype == "txt" ){  session += "TxtFile( shellcode )\n"; }
             else if( outype == "raw" ){  session += "RawFile( shellcode )\n"; }
             else if( outype == "py" ){  session += "PyFile( shellcode )\n"; }

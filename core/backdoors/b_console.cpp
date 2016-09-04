@@ -114,9 +114,9 @@ do{
                 for(i; i < strlen(str3); i++)
                 {
                     if(check_digit(str3[i]))
-                    state = 1;
+                        state = 1;
                     else
-                    state = 0;
+                        state = 0;
                 }
 
                 if(state == 0){

@@ -2,20 +2,36 @@
 #include "rlutil.h"
 using namespace std;
 
-int main(){
+int main(int argc, char* argv[]){
 
-int control, i;
+do{
 
-printf("Enter number ->");
-cin >> control;
+    int control, i;
+    rlutil::resetColor(); rlutil::setColor(7);
+    printf("Enter number ->");
+    cin >> control;
 
-for(i=0;i<=control;i++){
-    cout << "Color digit:" << i << endl;
-    rlutil::setColor(i);
+    if(control > 8191){
 
-}
+        cout << "Max 8191 :C" << endl;
 
-    rlutil::setColor(8);
+    }
 
+    else if(control == 0){
+        printf("\nmokoko .d\n");
+        exit(0);
+    }
+    else{
+
+        for(i=0;i<=control;i++){
+            cout << "Color digit:" << i << endl;
+            rlutil::setColor(i);
+        }
+
+    }
+
+}while(1);
+
+    rlutil::setColor(7);
     return 0;
 }

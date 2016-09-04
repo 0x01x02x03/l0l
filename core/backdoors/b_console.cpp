@@ -13,7 +13,7 @@ do{
     rlutil::setColor(12);
     cout << parsermodule;
     // Set White Color
-    rlutil::setColor(15);
+    rlutil::setColor(7);
     cout << ")";
     rlutil::setColor(9);
     printf(" > ");

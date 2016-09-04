@@ -25,7 +25,7 @@ int main(int argc, char * argv[]){
         cout << "l0l > ";
 
         // Set White Color
-        rlutil::setColor(15);
+        rlutil::setColor(7);
 
         getline( cin, cmd );
         //char *command = &cmd[0u];

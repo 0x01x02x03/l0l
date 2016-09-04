@@ -1041,15 +1041,15 @@
                     if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
                         output(1, "exe", "freebsd_x86", "exec", args2, args1);
                     else if(str2[0] == 'c' && str2[1] == '\0')
-                        output(1, "c", "freebsd_x86", "exec", args2, args1);
+                        output(1, "c", "freebsd_x86", "exec", args1, args2);
                     else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
-                        output(1, "cpp", "freebsd_x86", "exec", args2, args1);
+                        output(1, "cpp", "freebsd_x86", "exec", args1, args2);
                     else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
-                        output(1, "txt", "freebsd_x86", "exec", args2, args1);
+                        output(1, "txt", "freebsd_x86", "exec", args1, args2);
                     else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
-                        output(1, "raw", "freebsd_x86", "exec", args2, args1);
+                        output(1, "raw", "freebsd_x86", "exec", args1, args2);
                     else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
-                        output(1, "py", "freebsd_x86", "exec", args2, args1);
+                        output(1, "py", "freebsd_x86", "exec", args1, args2);
 
                 }
 
@@ -1159,17 +1159,17 @@
                 else{
 
                     if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
-                        output(1, "exe", "freebsd_x64", "exec", args2, args1);
+                        output(1, "exe", "freebsd_x64", "exec", args1, args2);
                     else if(str2[0] == 'c' && str2[1] == '\0')
-                        output(1, "c", "freebsd_x64", "exec", args2, args1);
+                        output(1, "c", "freebsd_x64", "exec", args1, args2);
                     else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
-                        output(1, "cpp", "freebsd_x64", "exec", args2, args1);
+                        output(1, "cpp", "freebsd_x64", "exec", args1, args2);
                     else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
-                        output(1, "txt", "freebsd_x64", "exec", args2, args1);
+                        output(1, "txt", "freebsd_x64", "exec", args1, args2);
                     else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
-                        output(1, "raw", "freebsd_x64", "exec", args2, args1);
+                        output(1, "raw", "freebsd_x64", "exec", args1, args2);
                     else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
-                        output(1, "py", "freebsd_x64", "exec", args2, args1);
+                        output(1, "py", "freebsd_x64", "exec", args1, args2);
 
                 }
 

@@ -102,6 +102,6 @@ jabber : roissy@exploit.im
 
 #Screenshots
 
-![alt tag](http://i.hizliresim.com/RQQBGn.png)
+![alt tag](http://i.hizliresim.com/2jE25E.png)
 
-![alt tag](http://i.hizliresim.com/pEE92n.png)
+![alt tag](http://i.hizliresim.com/B8yZ4L.png)

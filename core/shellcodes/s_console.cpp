@@ -13,7 +13,7 @@ do{
     rlutil::setColor(8);
     cout << ":";
     // Set White Color
-    rlutil::setColor(7);
+    rlutil::setColor(15);
     cout << "shellcode(";
     // Set Red Color
     rlutil::setColor(12);

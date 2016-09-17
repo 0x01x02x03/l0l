@@ -215,9 +215,6 @@ bool isValidIpAddress(char *st)
     char *ch;
 
     int quadsCnt=0;
-
-    //printf("Split IP: \"%s\"\n", st);
-
     len = strlen(st);
 
     //  Check if the string is valid
@@ -229,11 +226,8 @@ bool isValidIpAddress(char *st)
     while (ch != NULL)
     {
         quadsCnt++;
-        //printf("Quald %d is %s\n", quadsCnt, ch);
-
         num = 0;
         i = 0;
-
         //  Get the current token and convert to an integer value
         while(ch[i]!='\0')
         {
@@ -244,13 +238,11 @@ bool isValidIpAddress(char *st)
 
         if(num<0 || num>255)
         {
-            //printf("Not a valid ip\n");
             return false;
         }
 
         if( (quadsCnt == 1 && num == 0) || (quadsCnt == 4 && num == 0))
         {
-            //printf("Not a valid ip, quad: %d AND/OR quad:%d is zero\n", quadsCnt, quadsCnt);
             return false;
         }
 

@@ -14,7 +14,7 @@ do{
     rlutil::setColor(12);
     cout << usetxt;
     // Set White Color
-    rlutil::setColor(7);
+    rlutil::setColor(15);
     cout << ")";
     rlutil::setColor(9);
     printf(" > ");

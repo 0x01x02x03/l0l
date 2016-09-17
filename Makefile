@@ -38,8 +38,8 @@ install:
 	$(CPDIR) core $(SHAREDIR)/$(TARGET)
 	# install wrapper to bin
 	$(INSTALL_RX) $(WRAPPER) $(BINDIR)/$(TARGET)
-	$(MKDIR_RO) $(LICENSEDIR)/$(TARGET)
 	# install license
+	$(MKDIR_RX) $(LICENSEDIR)/$(TARGET)
 	$(INSTALL_RO) LICENSE $(LICENSEDIR)/$(TARGET)
 
 uninstall:

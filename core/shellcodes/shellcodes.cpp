@@ -43,7 +43,7 @@ void genshellcode(int argp, string os, string type, string a1, string a2)
 
         session +=
                     "lenlen = len(shellcode)\n"
-                    "print \"Shellcode lenght: %s\" % lenlen\n"
+                    "print \"Shellcode length: %s\" % lenlen\n"
                     "print \"\"\n";
 
         session +=

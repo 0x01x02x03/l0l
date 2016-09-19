@@ -17,7 +17,7 @@
 main()
 {
    int *ret;
-   printf("Shellcode lenght=%d\n",sizeof(shellcode));
+   printf("Shellcode length=%d\n",sizeof(shellcode));
    ret=(int*)&ret+2;
    (*ret)=(int)shellcode;
 }

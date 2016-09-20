@@ -44,6 +44,9 @@ def generator( choose, shellcode, argv="None", argv2="None"):
 			from stackconvert import IP
 			from stackconvert import PORT
 			return reverse_tcpx86( IP(argv), PORT(argv2))
+		elif shellcode == "cd_eject":
+                        from Linux86.cd_eject import cd_eject
+                        return cd_eject()
 
 	elif choose == "linux_x64":
 		if shellcode == "bin_sh":

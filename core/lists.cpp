@@ -33,7 +33,8 @@ void shellcodeList(){
             "\t\tlinux86/read\n"
             "\t\tlinux86/chmod\n"
             "\t\tlinux86/tcp_bind\n"
-            "\t\tlinux86/reverse_tcp\n\n";
+            "\t\tlinux86/reverse_tcp\n"
+            "\t\tlinux86/cd_eject\n\n";
 
 
     cout <<

@@ -56,6 +56,14 @@ else if(strcmp(str, "linux86/reverse_tcp") == 0){
     opti="reverse_tcp";
 }
 
+else if(strcmp(str, "linux86/cd_eject") == 0){
+    usetxt=str;
+    type = "shellcode";
+    sjsj = 4;
+    oskaka="linux_x86";
+    opti="cd_eject";
+}
+
 // Linux x64
 
 else if(strcmp(str, "linux64/binsh") == 0){

@@ -3,7 +3,6 @@
 [![Join the chat at https://badges.gitter.im/l0l-chat](https://badges.gitter.im/l0l-chat/l0l.svg)](https://gitter.im/l0l-chat/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 ![MIT Licence](https://img.shields.io/badge/Licence-MIT_Licence-red.svg?style=plastic)
 
- 
 ##Installation
 
 Unix/Linux:
@@ -59,7 +58,7 @@ Module Commands :
 
 ##Bugs
 
-Please Report bugs with Jabber, E-mail, Pull Request.. (:
+Please Report bugs with Jabber, E-Mail, Pull Request.. (:
 
 
 ##Contact

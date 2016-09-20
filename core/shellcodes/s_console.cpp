@@ -6,20 +6,20 @@
 
 do{
     string scmd, controller;
-    char *str2, *str3, *str4, *p;
+    char *str2, *str3;
 
     rlutil::setColor(9);
     cout << "l0l";
     rlutil::setColor(8);
     cout << ":";
     // Set White Color
-    rlutil::setColor(15);
+    rlutil::setColor(7);
     cout << "shellcode(";
     // Set Red Color
     rlutil::setColor(12);
     cout << usetxt;
     // Set White Color
-    rlutil::setColor(15);
+    rlutil::setColor(7);
     cout << ")";
     rlutil::setColor(9);
     printf(" > ");
@@ -119,12 +119,167 @@ do{
 
     }
     else if(strcmp(usecmd2, "set") == 0){
-        // Include set command .assets...
-        #include "set.cpp"
+
+        str2 = shorter(usecmd2,4);
+
+        if(opti == "exec"){
+
+            if( str2[0] == 'c' && str2[1] == 'o' && str2[2] == 'm' && str2[3] == 'm' && str2[4] == 'a' && str2[5] == 'n' && str2[6] == 'd' && str2[7] == ' ' ){
+                str3 = shorter(str2,8);
+                args1 = str3;
+                cout << "\ncommand => " << str3 << "\n\n";
+            }
+            else{
+                rlutil::setColor(12);
+                cout << "This option is not available.\n";
+            }
+
+        }
+        else if(opti == "download&exec" || opti == "downloadandexecute"){
+
+            if( str2[0] == 'l' && str2[1] == 'i' && str2[2] == 'n' && str2[3] == 'k' && str2[4] == ' ' ){
+                str3 = shorter(str2,5);
+                args1 = str3;
+                cout << "\nlink => " << str3 << "\n\n";
+            }
+            else{
+                rlutil::setColor(12);
+                cout << "This option is not available.\n";
+            }
+
+        }
+        else if(opti == "read" || opti == "chmod"){
+
+            if( str2[0] == 'f' && str2[1] == 'i' && str2[2] == 'l' && str2[3] == 'e' && str2[4] == ' ' ){
+                str3 = shorter(str2,5);
+                args1 = str3;
+                cout << "\nfile => " << str3 << "\n\n";
+            }
+            else{
+                rlutil::setColor(12);
+                cout << "This option is not available.\n";
+            }
+
+        }
+        else if(opti == "tcp_bind"){
+
+            if(str2[0] == 'p' && str2[1] == 'o' && str2[2] == 'r' && str2[3] == 't' && str2[4] == ' '){
+                str3 = shorter(str2,5);
+                args1 = str3;
+                cout << "\nport => " << str3 << "\n\n";
+            }
+            else{
+                rlutil::setColor(12);
+                cout << "This option is not available.\n";
+            }
+        }
+        else if(opti == "reverse_tcp" || opti == "reverse_tcp2"){
+
+            if( str2[0] == 'h' && str2[1] == 'o' && str2[2] == 's' && str2[3] == 't' && str2[4] == ' ' ){
+                str3 = shorter(str2,5);
+                args1 = str3;
+                cout << "\nhost => " << str3 << "\n\n";
+            }
+            else if(str2[0] == 'p' && str2[1] == 'o' && str2[2] == 'r' && str2[3] == 't' && str2[4] == ' '){
+                str3 = shorter(str2,5);
+                args2 = str3;
+                cout << "\nport => " << str3 << "\n\n";
+            }
+            else{
+                rlutil::setColor(12);
+                cout << "This option is not available.\n";
+            }
+
+        }
+        else if(opti == "messagebox"){
+
+            if( str2[0] == 'm' && str2[1] == 'e' && str2[2] == 's' && str2[3] == 's' && str2[4] == 'a' && str2[5] == 'g' && str2[6] == 'e' && str2[7] == ' ' ){
+                str3 = shorter(str2,8);
+                args1 = str3;
+                cout << "\nmessage => " << str3 << "\n\n";
+
+            }
+            else{
+                rlutil::setColor(12);
+                cout << "This option is not available.\n";
+            }
+
+       }
+
     }
     else if(strcmp(usecmd2, "unset") == 0){
-        // Include unset command .assets...
-        #include "unset.cpp"
+
+        str2 = shorter(usecmd2,6);
+
+        if(opti == "exec"){
+
+            if( str2[0] == 'c' && str2[1] == 'o' && str2[2] == 'm' && str2[3] == 'm' && str2[4] == 'a' && str2[5] == 'n' && str2[6] == 'd' ){
+                args1 = "None";
+            }
+            else{
+                rlutil::setColor(12);
+                cout << "This option is not available.\n";
+            }
+
+        }
+        else if(opti == "download&exec" || opti == "downloadandexecute"){
+
+            if( str2[0] == 'l' && str2[1] == 'i' && str2[2] == 'n' && str2[3] == 'k' ){
+                args1 = "None";
+            }
+            else{
+                rlutil::setColor(12);
+                cout << "This option is not available.\n";
+            }
+
+        }
+        else if(opti == "read" || opti == "chmod"){
+
+            if( str2[0] == 'f' && str2[1] == 'i' && str2[2] == 'l' && str2[3] == 'e' ){
+                args1 = "None";
+            }
+            else{
+                rlutil::setColor(12);
+                cout << "This option is not available.\n";
+            }
+
+        }
+        else if(opti == "tcp_bind"){
+
+            if(str2[0] == 'p' && str2[1] == 'o' && str2[2] == 'r' && str2[3] == 't' ){
+                args1 = "None";
+            }
+            else{
+                rlutil::setColor(12);
+                cout << "This option is not available.\n";
+            }
+        }
+        else if(opti == "reverse_tcp" || opti == "reverse_tcp2"){
+
+            if( str2[0] == 'h' && str2[1] == 'o' && str2[2] == 's' && str2[3] == 't' ) {
+                args1 = "None";
+            }
+            else if(str2[0] == 'p' && str2[1] == 'o' && str2[2] == 'r' && str2[3] == 't' ){
+                args2 = "None";
+            }
+            else{
+                rlutil::setColor(12);
+                cout << "This option is not available.\n";
+            }
+
+        }
+        else if(opti == "messagebox"){
+
+            if( str2[0] == 'm' && str2[1] == 'e' && str2[2] == 's' && str2[3] == 's' && str2[4] == 'a' && str2[5] == 'g' && str2[6] == 'e' ){
+                args1 = "None";
+            }
+            else{
+                rlutil::setColor(12);
+                cout << "This option is not available.\n";
+            }
+
+        }
+
     }
     else if(strcmp(usecmd, "generate") == 0){
 

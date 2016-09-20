@@ -8,13 +8,13 @@ do{
     rlutil::setColor(8);
     cout << ":";
     // Set White Color
-    rlutil::setColor(15);
+    rlutil::setColor(7);
     cout << "injector(";
     // Set Red Color
     rlutil::setColor(12);
     cout << usetxt;
     // Set White Color
-    rlutil::setColor(15);
+    rlutil::setColor(7);
     cout << ")";
     rlutil::setColor(9);
     printf(" > ");

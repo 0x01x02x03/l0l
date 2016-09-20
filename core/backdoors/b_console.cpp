@@ -18,7 +18,7 @@ do{
     rlutil::setColor(9);
     printf(" > ");
     // Set White Color
-    rlutil::setColor(15);
+    rlutil::setColor(7);
 
     getline( cin, bcmd );
     //char *usecmd = &bcmd[0u];

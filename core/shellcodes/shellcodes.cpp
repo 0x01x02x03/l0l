@@ -40,12 +40,6 @@ void genshellcode(int argp, string os, string type, string a1, string a2)
         session += "shellcode = generator( os, shelltype )\n";
 
     }
-
-        session +=
-                    "lenlen = len(shellcode)\n"
-                    "print \"Shellcode length: %s\" % lenlen\n"
-                    "print \"\"\n";
-
         session +=
                     "b = shellcode.split(\"\\\\\")\n"
                     "x = 1\n"
@@ -86,75 +80,6 @@ void genshellcode(int argp, string os, string type, string a1, string a2)
 
 void output(int argp, string outype, string os, string type, string a1, string a2)
 {
-
-    /*
-
-    Output Types :
-
-    Extension ..
-
-    c
-
-    cpp, cpp windows
-
-    txt
-
-    raw
-
-    python
-
-    dll
-
-
-
-    Output functions ->
-
-     CFile(SHELLCODE)
-
-     CplusplusFile(SHELLCODE, win=False,True)
-
-     TxtFile(SHELLCODE)
-
-     RawFile(SHELLCODE)
-
-     PyFile(SHELLCODE)
-
-     DllFile(SHELLCODE)
-
-
-     ExeFile(SHELLCODE, OS="windows")
-
-     OS List =>
-
-
-     linux64
-
-     windows
-
-     openbsdx86
-
-     solarisx86
-
-     linuxpowerpc
-
-     openbsdpowerpc
-
-     linuxsparc
-
-     freebsdsparc
-
-     opensbdsparc
-
-     solarissparc
-
-     linuxarm
-
-     freebsdarm
-
-     opensbdarm
-
-    */
-
     string session;
 
     session="from core.database.generator import *\n"

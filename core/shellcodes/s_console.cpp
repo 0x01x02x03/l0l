@@ -24,7 +24,7 @@ do{
     rlutil::setColor(9);
     printf(" > ");
     // Set White Color
-    rlutil::setColor(15);
+    rlutil::setColor(7);
 
     getline( cin, scmd );
     //char *usecmd = &scmd[0u];
@@ -79,8 +79,44 @@ do{
         clear();
     }
     else if(strcmp(usecmd, "show options") == 0){
-        // Include show options command .assets...
-        #include "options.cpp"
+
+        rlutil::setColor(2);
+        cout <<
+                "\n\tModule options (" << modulen << "):\n\n"
+                "\t\tName\t" << "\tDescription" << "\t\tCurrent Setting\n"
+                "\t\t----\t" "\t-----------\t" << "\t---------------\n";
+
+       if(opti == "exec"){
+            cout <<
+                    "\t\tcommand\t" <<  "\tCommand to execute\t" << args1 << "\n\n";
+       }
+       else if(opti == "download&exec" || opti == "downloadandexecute"){
+            cout <<
+                    "\t\tlink\t" <<  "\tSource to download exe\t" << args1 << "\n\n";
+       }
+       else if(opti == "read" || opti == "chmod"){
+            cout <<
+                    "\t\tfile\t" <<  "\tFile name&path\t\t" << args1 << "\n\n";
+       }
+       else if(opti == "tcp_bind"){
+            cout <<
+                    "\t\tport\t" <<  "\tConnect PORT\t\t" << args1 << "\n\n";
+       }
+       else if(opti == "reverse_tcp" || opti == "reverse_tcp2"){
+            cout <<
+                    "\t\thost\t" <<  "\tConnect HOST\t\t" << args1 << "\n"
+                    "\t\tport\t" <<  "\tConnect PORT\t\t" << args2 << "\n\n";
+       }
+       else if(opti == "messagebox"){
+            cout <<
+                    "\t\tmessage\t" <<  "\tMessage Box Text\t" << args1 << "\n\n";
+       }
+       else{
+            cout <<
+                    "\n\t\tNo option. Just use generate.\n\n";
+
+       }
+
     }
     else if(strcmp(usecmd2, "set") == 0){
         // Include set command .assets...
@@ -91,11 +127,28 @@ do{
         #include "unset.cpp"
     }
     else if(strcmp(usecmd, "generate") == 0){
-        // Include generate command .assets...
-        #include "generate.cpp"
+
+        if(sjsj == 1){
+            if(args1 == "None"){ cout << "\nSet option before generate shellcode.\n\n"; }
+            else{ genshellcode(sjsj, oskaka, opti, args1, args2); }
+        }
+        else if(sjsj == 2){
+            if(args1 == "None" || args2 == "None"){ cout << "\nSet option before generate shellcode.\n\n"; }
+            else{ genshellcode(sjsj, oskaka, opti, args1, args2); }
+        }
+        else if(sjsj == 3){
+            if(args1 == "None"){ cout << "\nSet option before generate shellcode.\n\n"; }
+            else{ genshellcode(sjsj, oskaka, opti, args1, args2); }
+        }
+        else if(sjsj == 4){ genshellcode(sjsj, oskaka, opti, args1, args2); }
+        else if(sjsj == 5){
+            if(args1 == "None" || args2 == "None"){ cout << "\nSet option before generate shellcode.\n\n"; }
+            else{ genshellcode(2, oskaka, opti, args2, args1); }
+        }
+
     }
     else if(strcmp(usecmd2, "output") == 0){
-        // Shellcode output command ..
+        // Shellcode output ..
         #include "output.cpp"
     }
 

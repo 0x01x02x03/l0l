@@ -2,7 +2,7 @@
 CC = g++
 CFLAGS= -g -Wall
 TARGET = l0l
-WRAPPER = l0l.sh
+WRAPPER = core/l0l.sh
 #commands
 RM = rm -f
 RMDIR = rm -rf

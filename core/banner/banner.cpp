@@ -21,7 +21,7 @@ void banner(){
     else if(x == 5)
         fp = fopen("core/banner/logo5.txt", "r");
 
-    // Set Red Color
+    // Red Color
     rlutil::setColor(12);
 
     while( ( kaka = fgetc(fp) ) != EOF )
@@ -31,14 +31,14 @@ void banner(){
 
     printf("\n");
 
-    // Set Red Color
+    // Red Color
     // rlutil::setColor(12);
 
-    // Set Green Color
+    // Green Color
     // rlutil::setColor(2);
 
     rlutil::setColor(2);
-    printf("        =[ l0l v1         -");
+    printf("        =[ l0l v0.1       -");
     rlutil::setColor(12);
     printf("  BETA                               ");
     rlutil::setColor(2);

@@ -1,4 +1,5 @@
-string usetxt, type, oskaka;
+int sjsj;
+string usetxt, type, oskaka, opti;
 
 str =  shorter(command,4);
 

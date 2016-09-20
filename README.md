@@ -3,11 +3,10 @@
 [![Join the chat at https://badges.gitter.im/l0l-chat](https://badges.gitter.im/l0l-chat/l0l.svg)](https://gitter.im/l0l-chat/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 ![MIT Licence](https://img.shields.io/badge/Licence-MIT_Licence-red.svg?style=plastic)
 
-l0l an exploit development kit.
  
 ##Installation
 
-Unix/Linux etc. :
+Unix/Linux:
 
 Requirements : g++ and Python 2
 
@@ -60,14 +59,11 @@ Module Commands :
 
 ##Bugs
 
-Please Report bugs with Jabber,e-mail,pull request.. (:
+Please Report bugs with Jabber, E-mail, Pull Request.. (:
 
 
 ##Contact
 
-email : roissy@tuta.io 
+E-Mail : roissy@tuta.io 
 
-jabber : roissy@exploit.im
-
-
-
+Jabber : roissy@exploit.im

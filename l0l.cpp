@@ -1,4 +1,4 @@
-/**
+/*
     l0l - The Exploit Development Kit
     Author:roissy
     Greetz:B3mB4m

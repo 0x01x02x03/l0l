@@ -1,4 +1,4 @@
-/**
+/*
     l0l - The Exploit Development Kit
     Authors:roissy
     Greetz:B3mB4m
@@ -303,8 +303,116 @@ do{
 
     }
     else if(strcmp(usecmd2, "output") == 0){
-        // Shellcode output ..
-        #include "output.cpp"
+
+        str2 = shorter(usecmd2,7);
+        controller = str2;
+
+        if(str2[0] == '\0'){
+            outputCommand();
+        }else{
+
+            if(controller == "exe" || controller == "c" || controller == "cpp" || controller == "txt" || controller == "raw" || controller == "py" ){
+
+                if(sjsj == 1){
+                    if(args1 == "None"){ cout << "\nSet option before generate shellcode.\n\n"; }
+                    else{
+
+                        if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                            output(sjsj, "exe", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'c' && str2[1] == '\0')
+                            output(sjsj, "c", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                            output(sjsj, "cpp", oskaka, opti, args1, args2);
+                        else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                            output(sjsj, "txt", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                            output(sjsj, "raw", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                            output(sjsj, "py", oskaka, opti, args1, args2);
+
+                    }
+
+                }
+                else if(sjsj == 2){
+                    if(args1 == "None" || args2 == "None"){ cout << "\nSet option before generate shellcode.\n\n"; }
+                    else{
+
+                        if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                            output(sjsj, "exe", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'c' && str2[1] == '\0')
+                            output(sjsj, "c", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                            output(sjsj, "cpp", oskaka, opti, args1, args2);
+                        else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                            output(sjsj, "txt", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                            output(sjsj, "raw", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                            output(sjsj, "py", oskaka, opti, args1, args2);
+
+                    }
+
+                }
+                else if(sjsj == 3){
+                    if(args1 == "None"){ cout << "\nSet option before generate shellcode.\n\n"; }
+                    else{
+
+                        if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                            output(sjsj, "exe", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'c' && str2[1] == '\0')
+                            output(sjsj, "c", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                            output(sjsj, "cpp", oskaka, opti, args1, args2);
+                        else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                            output(sjsj, "txt", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                            output(sjsj, "raw", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                            output(sjsj, "py", oskaka, opti, args1, args2);
+
+                     }
+                }
+                else if(sjsj == 4){
+
+                        if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                            output(sjsj, "exe", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'c' && str2[1] == '\0')
+                            output(sjsj, "c", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                            output(sjsj, "cpp", oskaka, opti, args1, args2);
+                        else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                            output(sjsj, "txt", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                            output(sjsj, "raw", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                            output(sjsj, "py", oskaka, opti, args1, args2);
+
+                }
+                else if(sjsj == 5){
+                    if(args1 == "None" || args2 == "None"){ cout << "\nSet option before generate shellcode.\n\n"; }
+                    else{
+
+                        if(str2[0] == 'e' && str2[1] == 'x' && str2[2] == 'e' && str2[3] == '\0')
+                            output(sjsj, "exe", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'c' && str2[1] == '\0')
+                            output(sjsj, "c", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'c' && str2[1] == 'p' && str2[2] == 'p' && str2[3] == '\0')
+                            output(sjsj, "cpp", oskaka, opti, args1, args2);
+                        else if(str2[0] == 't' && str2[1] == 'x' && str2[2] == 't' && str2[3] == '\0')
+                            output(sjsj, "txt", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'r' && str2[1] == 'a' && str2[2] == 'w' && str2[3] == '\0')
+                            output(sjsj, "raw", oskaka, opti, args1, args2);
+                        else if(str2[0] == 'p' && str2[1] == 'y' && str2[2] == '\0')
+                            output(sjsj, "py", oskaka, opti, args1, args2);
+
+                    }
+
+                }
+
+            }
+
+        }
+
     }
 
     else{

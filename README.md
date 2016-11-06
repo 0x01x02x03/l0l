@@ -2,6 +2,8 @@
 
 ##The Exploit Development Toolkit 
 
+![alt tag](http://i.hizliresim.com/a3ZrM7.jpg)
+
 ##Installation
 
 Unix/Linux:
@@ -51,6 +53,6 @@ Please Report bugs with via Jabber, E-Mail, Pull Request..
 
 ##Contact:
 
-E-Mail : `m3pt0r@protonmail.com`
+E-Mail : m3pt0r@protonmail.com
 
-Jabber : `m3pt0r@exploit.im`
+Jabber : m3pt0r@exploit.im

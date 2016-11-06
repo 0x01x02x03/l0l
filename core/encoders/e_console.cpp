@@ -1,4 +1,4 @@
-do{
+do {
     string ecmd;
     char *str2;
 

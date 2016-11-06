@@ -10,14 +10,14 @@
 
        -- The Exploit Development Toolkit - Laughing Zero Loud (l0l) --
 
-[*] Leader: m3pt0r
-[*] Greetz: b3mb4m <3
-[*] Version: BETA
-[*] License: MIT LICENSE
+[#] Leader  : m3pt0r
+[#] Greetz  : b3mb4m <3
+[#] Thanks  : Oguz Bektas (xorond)
+[*] Version : BETA
+[*] License : MIT LICENSE
+[-] Contact : m3pt0r@protonmail.com
 [~] Who are we?
 [~] We are ~anonymity insane humans. no other information, haha.
-
-[-] Contact: m3pt0r@protonmail.com
 
 */
 

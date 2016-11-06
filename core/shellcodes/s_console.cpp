@@ -1,4 +1,4 @@
-do{
+do {
     string scmd, controller;
     char *str2, *str3;
 

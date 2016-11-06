@@ -1,4 +1,4 @@
-do{
+do {
     string bcmd;
     char *str2, *str3;
 

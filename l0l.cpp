@@ -38,7 +38,7 @@ int main(){
         char* command = strdup(cmd.c_str());
         strtok(command, " ");
 
-        if      (cin.eof())  closeApp();
+        if      (cin.eof()) closeApp();
         else if (strlen(command) == 0 || command[0] == '\r' || command[0] == '\n');
         else if (strcmp(command,"help") == 0) help();
         else if (strcmp(command,"banner") == 0) banner();

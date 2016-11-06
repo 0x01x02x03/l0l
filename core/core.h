@@ -17,7 +17,7 @@
 using namespace std;
 
 
-/* Os detect */
+/* Os */
 
 #ifdef __unix__
 #elif defined(_WIN32) || defined(WIN32)
@@ -41,7 +41,3 @@ using namespace std;
 /* Backdoors */
 
 #include "backdoors/scripting_payloads.cpp"
-
-
-
-

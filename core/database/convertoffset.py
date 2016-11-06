@@ -1,11 +1,9 @@
+#------------------Bombermans Team---------------------------------# 
+#Author  : B3mB4m
+#Concat  : b3mb4m@protonmail.com
+#Project : https://github.com/b3mb4m/Shellsploit
+#LICENSE : https://github.com/b3mb4m/Shellsploit/blob/master/LICENSE
 #------------------------------------------------------------------#
-#Author  : roissy
-#Greetz  : b3mb4m
-#Concat  : roissy@tuta.io
-#Project : https://github.com/roissy/l0l
-#LICENSE : https://github.com/roissy/l0l/blob/master/LICENSE
-#------------------------------------------------------------------#
-
 
 def binarytodecimal( number):
 	number = str(number)[::-1]
@@ -22,7 +20,6 @@ def binarytoohex( number):
 	number = binarytodecimal( number)
 	return decimaltohex( number)
 
-
 def octaltodecimal( number):
 	number = str(number)[::-1]
 	total = 0
@@ -37,7 +34,6 @@ def octaltobinary( number):
 def octaltohex( number):
 	number = octaltodecimal( number)
 	return decimaltohex( number)
-
 
 def hextodecimal( number):
 	number = number[::-1]
@@ -59,7 +55,6 @@ def hextobinary( number):
 def hextooctal( number):
 	number = hextodecimal( number)
 	return decimaltooctal( number)
-
 
 def decimaltobinary( number):
 	list = []
@@ -88,4 +83,3 @@ def decimaltohex( number):
 		else: list.append(str(number % 16))
 		number = number / 16
 	return str("".join(list[::-1]))
-

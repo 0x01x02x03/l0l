@@ -1,44 +1,32 @@
-    int shellcodeP = 48;
-    int encodersP = 0;
-    int injectorP = 0;
-    int backdoorsP = 6;
-    int differentOsP = 11;
-
 void banner(){
-   srand ( time(NULL) );
-   int x = rand() % 5 + 1 ;
-   char kaka;
-   FILE *fp;
+    
+    int shellcodeP = 48,
+        encodersP = 0,
+        injectorP = 0,
+        backdoorsP = 6,
+        differentOsP = 11;
 
-    if(x == 1)
-        fp = fopen("core/banner/logo1.txt","r");
-    else if(x == 2)
-        fp = fopen("core/banner/logo2.txt", "r");
-    else if(x == 3)
-        fp = fopen("core/banner/logo3.txt", "r");
-    else if(x == 4)
-        fp = fopen("core/banner/logo4.txt", "r");
-    else if(x == 5)
-        fp = fopen("core/banner/logo5.txt", "r");
-
-    // Red Color
-    rlutil::setColor(12);
-
-    while( ( kaka = fgetc(fp) ) != EOF )
-      printf("%c",kaka);
-
+    srand ( time(NULL) );
+    int x = rand() % 5 + 1 ;
+    char kaka;
+    FILE *fp;
+    if(x == 1) fp = fopen("core/banner/logo1.txt","r");
+    else if(x == 2) fp = fopen("core/banner/logo2.txt", "r");
+    else if(x == 3) fp = fopen("core/banner/logo3.txt", "r");
+    else if(x == 4) fp = fopen("core/banner/logo4.txt", "r");
+    else if(x == 5) fp = fopen("core/banner/logo5.txt", "r");
+    rlutil::setColor(12); // Red Color
+    while((kaka = fgetc(fp))!=EOF) printf("%c",kaka);
+    
     fclose(fp);
 
-    printf("\n");
+    putchar('\n');
 
-    // Red Color
-    // rlutil::setColor(12);
-
-    // Green Color
-    // rlutil::setColor(2);
+    // Red Color - rlutil::setColor(12);
+    // Green Color - rlutil::setColor(2);
 
     rlutil::setColor(2);
-    printf("        =[ l0l v0.1       -");
+    printf("        =[ l0l            -");
     rlutil::setColor(12);
     printf("  BETA                               ");
     rlutil::setColor(2);
@@ -72,10 +60,10 @@ void banner(){
 
     printf(" + -- --=[ Open Source    :");
     rlutil::setColor(12);
-    printf("  https://github.com/roissy/l0l      ");
+    printf("  https://github.com/m3pt0r/l0l      ");
     rlutil::setColor(2);
     printf("]\n");
 
-    printf("\n");
+    putchar('\n');
 
 }

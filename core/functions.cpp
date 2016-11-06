@@ -1,22 +1,29 @@
 
-// Clear Screen Functions.
-
 void clear(){
-
-        #ifdef OS_Windows
-            system("cls");
-        #else
-            system("clear");
-        #endif
-
+    #ifdef OS_Windows
+        system("cls");
+    #else
+        system("clear");
+    #endif
 }
 
-// Help Menu Function
+void closeApp(){
+    rlutil::setColor(7); // White Color
+    printf("\nThanks for using l0l.\n");
+    exit(0);
+}
+
+void ctrlcCatch(int qwe) {
+    signal(SIGINT, ctrlcCatch);
+    rlutil::setColor(7); // White Color
+    printf("\nCtrl + C Detected. Trying to exit..\n");
+    exit(0);
+}
+
+char* shorter(char *bilik, int p){ bilik+=p; return bilik; }
+
 void help(){
-
-    // Set Green Color
-    rlutil::setColor(2);
-
+    rlutil::setColor(2); // Green Color
    	cout <<
             "\nUsage Commands\n"
             "===============\n"
@@ -33,14 +40,9 @@ void help(){
             "\t    use     \t\tExecute the specified module.\n"
             "\t    back    \t\tA back goes into operation.\n"
             "\t    exit    \t\tClose Application\n\n";
-
 }
-
 void injectorHelp(){
-
-    // Set Green Color
-    rlutil::setColor(2);
-
+    rlutil::setColor(2); // Green Color
     cout <<
             "\nInjector Commands\n"
             "=================\n"
@@ -50,14 +52,9 @@ void injectorHelp(){
             "\t    os      \t\tCommand directly ur computer\n"
             "\t    back    \t\tA back goes into operation.\n"
             "\t    exit    \t\tClose Application\n\n";
-
 }
-
 void encoderHelp(){
-
-    // Set Green Color
-    rlutil::setColor(2);
-
+    rlutil::setColor(2); // Green Color
     cout <<
             "\nEncoder Commands\n"
             "================\n"
@@ -67,14 +64,10 @@ void encoderHelp(){
             "\t    os      \t\tCommand directly ur computer\n"
             "\t    back    \t\tA back goes into operation.\n"
             "\t    exit    \t\tClose Application\n\n";
-
 }
 
 void shellcodeHelp(){
-
-    // Set Green Color
-    rlutil::setColor(2);
-
+    rlutil::setColor(2); // Green Color
     cout <<
             "\nShellcode Commands\n"
             "==================\n"
@@ -90,14 +83,10 @@ void shellcodeHelp(){
             "\t    generate \t\tGenerate shellcode\n"
             "\t    output   \t\tShellcode Output Type\n"
             "\t    show options\tShow current options of selected module\n\n";
-
 }
 
 void backdoorHelp(){
-
-    // Set Green Color
-    rlutil::setColor(2);
-
+    rlutil::setColor(2); // Green Color
     cout <<
             "\nBackdoor Commands\n"
             "=================\n"
@@ -115,16 +104,13 @@ void backdoorHelp(){
 }
 
 void osCommand(){
-
-    // Set Green Color
-    rlutil::setColor(2);
+    rlutil::setColor(2); // Green Color
     cout <<
             "\nos Command\n"
             "============\n"
             "\tDescription: Command directly ur computer\n"
             "\tUsage: os (command)\n"
             "\tExp: os ver\n";
-
 }
 
 void showCommand(){
@@ -180,31 +166,4 @@ void outputCommand(){
             "\tpy\t: Python File\n"
             "\tdll\t: Dll Source (Windows)\n\n";
 
-}
-
-// Close Function
-void closeApp(){
-
-    // Set White Color
-    rlutil::setColor(15);
-
-    printf("\nThanks for using l0l !\n");
-    exit(0);
-}
-
-// Ctrl + C Catch Function
-void ctrlcDetect(int qwe) {
-    signal(SIGINT, ctrlcDetect);
-
-    // Set White Color
-    rlutil::setColor(15);
-
-    printf("\nCtrl + C Detected. Trying to exit..\n");
-    exit(0);
-}
-
-// String Shorter
-char* shorter(char *bilik, int p){
-    bilik+=p;
-    return bilik;
 }

@@ -1,15 +1,11 @@
-#------------------------------------------------------------------#
-#Author  : roissy
-#Greetz  : b3mb4m
-#Concat  : roissy@tuta.io
-#Project : https://github.com/roissy/l0l
-#LICENSE : https://github.com/roissy/l0l/blob/master/LICENSE
+#------------------Bombermans Team---------------------------------# 
+#Author  : B3mB4m
+#Concat  : b3mb4m@protonmail.com
+#Project : https://github.com/b3mb4m/Shellsploit
+#LICENSE : https://github.com/b3mb4m/Shellsploit/blob/master/LICENSE
 #------------------------------------------------------------------#
 
-
-import sys
-import re
-import codecs
+import sys,re,codecs
 
 def plaintext( string):
 	string = codecs.encode(str.encode(string), 'hex')
@@ -23,8 +19,6 @@ def plaintextreverse( string):
 	db = re.findall("..?", string)
 	return "\\x"+"\\x".join(db[::-1])
 
-
-
 def PORT( port):
 	from convertoffset import decimaltohex
 	db = []
@@ -34,8 +28,6 @@ def PORT( port):
 			x = "0"+x
 		db.append(x)
 	return "\\x"+"\\x".join(db)
-
-
 
 def IP( ip):
 	from convertoffset import decimaltohex
@@ -51,7 +43,6 @@ def IP( ip):
 		db2.append(x)
 	return "\\x"+"\\x".join(db2)
 
-
 def rawSTR( string):
 	db = []
 	for x in string:
@@ -59,7 +50,6 @@ def rawSTR( string):
 		x = x.decode('utf-8')
 		db.append("\\x"+x)
 	return "".join(db)
-
 
 def ARM( string):
 	db = []
@@ -86,9 +76,6 @@ def ARMsplitter( hexdump, pushdword="None"):
 			second = re.findall("..?", first)[::-1]
 			db.append("\\x"+"\\x".join(second))
 		return "".join(db)
-
-
-
 
 def stackconvertSTR( string, win=False):
 	db = []
@@ -151,7 +138,6 @@ def stackconvertSTR( string, win=False):
 		else:
 			return "".join(db) #Unix,Linux etc..)
 
-
 def filler( string, number):
 	string = [x for x in string]
 	for x in range(0, len(string)):
@@ -159,7 +145,6 @@ def filler( string, number):
 			string[x] = "/"*number
 			break
 	return "".join(string)
-
 
 def splitter( hexdump, pushdword="None"):
 	db = []
@@ -185,5 +170,3 @@ def splitter( hexdump, pushdword="None"):
 			for x in second:
 				db.append("\\x"+x)
 			return "\\x66\\x68"+"".join(db)
-
-

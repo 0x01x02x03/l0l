@@ -1,16 +1,13 @@
-#------------------------------------------------------------------#
-#Author  : roissy
-#Greetz  : b3mb4m
-#Concat  : roissy@tuta.io
-#Project : https://github.com/roissy/l0l
-#LICENSE : https://github.com/roissy/l0l/blob/master/LICENSE
+#------------------Bombermans Team---------------------------------# 
+#Author  : B3mB4m
+#Concat  : b3mb4m@protonmail.com
+#Project : https://github.com/b3mb4m/Shellsploit
+#LICENSE : https://github.com/b3mb4m/Shellsploit/blob/master/LICENSE
 #------------------------------------------------------------------#
 
 from generator import *
 
-shellcode = generator( "windows", "messagebox", "dfgdfghdsfgdfgsdfdfgfdgfgddgfgdsfagseg666")
-
-
+shellcode = generator( "windows", "messagebox", "qqwwwee")
 
 b = shellcode.split("\\")
 

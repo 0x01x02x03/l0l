@@ -4,6 +4,9 @@
 
 ![alt tag](http://i.hizliresim.com/a3ZrM7.jpg)
 
+This project `Exploit Development` in an expanding toolkit. In the `BETA` stage.
+We'll give you more.
+
 ##Installation
 
 Unix/Linux:

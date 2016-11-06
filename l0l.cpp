@@ -40,10 +40,10 @@ int main(){
 
         if      (cin.eof())  closeApp();
         else if (strlen(command) == 0 || command[0] == '\r' || command[0] == '\n');
-        else if (strcmp(command,"help") == 0)   help();
+        else if (strcmp(command,"help") == 0) help();
         else if (strcmp(command,"banner") == 0) banner();
-        else if (strcmp(command,"clear") == 0)  clear();
-        else if (strcmp(command,"exit") == 0)   closeApp();
+        else if (strcmp(command,"clear") == 0) clear();
+        else if (strcmp(command,"exit") == 0) closeApp();
         else if (strcmp(command, "use") == 0){ 
             #include "core/mecanism.cpp" 
         }

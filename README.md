@@ -26,8 +26,9 @@ To run: `l0l`
 
 ##Pre-installed Systems
 
-![alt tag](https://github.com/BlackArch/blackarch-artwork/blob/master/logo/logo-38-49.png?raw=true "blackarch.org")
 ![alt tag](https://avatars2.githubusercontent.com/u/13773009?v=3&s=40 "archstrike.org")
+![alt tag](https://github.com/BlackArch/blackarch-artwork/blob/master/logo/logo-38-49.png?raw=true "blackarch.org")
+
 
 ##Usage
 

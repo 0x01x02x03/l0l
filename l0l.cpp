@@ -45,7 +45,7 @@ int main(){
         else if (strcmp(command,"clear") == 0) clear();
         else if (strcmp(command,"exit") == 0) closeApp();
         else if (strcmp(command, "use") == 0){
-            #include "core/mecanism.cpp"
+            #include "core/mechanism.cpp"
         }
         else if (strcmp(command,"os") == 0){
             rlutil::setColor(7); // White Color

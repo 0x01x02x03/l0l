@@ -1,6 +1,6 @@
 // Linux x86
 
-else if(strcmp(str, "linux86/exec") == 0){
+else if(!strcmp(str, "linux86/exec")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -8,7 +8,7 @@ else if(strcmp(str, "linux86/exec") == 0){
     opti="exec";
 }
 
-else if(strcmp(str, "linux86/download&execute") == 0){
+else if(!strcmp(str, "linux86/download&execute")){
     usetxt=str;
     type = "shellcode";
     sjsj = 3;
@@ -16,7 +16,7 @@ else if(strcmp(str, "linux86/download&execute") == 0){
     opti="download&exec";
 }
 
-else if(strcmp(str, "linux86/binsh") == 0){
+else if(!strcmp(str, "linux86/binsh")){
     usetxt=str;
     type = "shellcode";
     sjsj = 4;
@@ -24,7 +24,7 @@ else if(strcmp(str, "linux86/binsh") == 0){
     opti="bin_sh";
 }
 
-else if(strcmp(str, "linux86/read") == 0){
+else if(!strcmp(str, "linux86/read")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -32,7 +32,7 @@ else if(strcmp(str, "linux86/read") == 0){
     opti="read";
 }
 
-else if(strcmp(str, "linux86/chmod") == 0){
+else if(!strcmp(str, "linux86/chmod")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -40,7 +40,7 @@ else if(strcmp(str, "linux86/chmod") == 0){
     opti="chmod";
 }
 
-else if(strcmp(str, "linux86/tcp_bind") == 0){
+else if(!strcmp(str, "linux86/tcp_bind")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -48,7 +48,7 @@ else if(strcmp(str, "linux86/tcp_bind") == 0){
     opti="tcp_bind";
 }
 
-else if(strcmp(str, "linux86/reverse_tcp") == 0){
+else if(!strcmp(str, "linux86/reverse_tcp")){
     usetxt=str;
     type = "shellcode";
     sjsj = 2;
@@ -56,7 +56,7 @@ else if(strcmp(str, "linux86/reverse_tcp") == 0){
     opti="reverse_tcp";
 }
 
-else if(strcmp(str, "linux86/cd_eject") == 0){
+else if(!strcmp(str, "linux86/cd_eject")){
     usetxt=str;
     type = "shellcode";
     sjsj = 4;
@@ -66,7 +66,7 @@ else if(strcmp(str, "linux86/cd_eject") == 0){
 
 // Linux x64
 
-else if(strcmp(str, "linux64/binsh") == 0){
+else if(!strcmp(str, "linux64/binsh")){
     usetxt=str;
     type = "shellcode";
     sjsj = 4;
@@ -74,7 +74,7 @@ else if(strcmp(str, "linux64/binsh") == 0){
     opti="bin_sh";
 }
 
-else if(strcmp(str, "linux64/read") == 0){
+else if(!strcmp(str, "linux64/read")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -82,7 +82,7 @@ else if(strcmp(str, "linux64/read") == 0){
     opti="read";
 }
 
-else if(strcmp(str, "linux64/tcp_bind") == 0){
+else if(!strcmp(str, "linux64/tcp_bind")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -90,7 +90,7 @@ else if(strcmp(str, "linux64/tcp_bind") == 0){
     opti="tcp_bind";
 }
 
-else if(strcmp(str, "linux64/reverse_tcp") == 0){
+else if(!strcmp(str, "linux64/reverse_tcp")){
     usetxt=str;
     type = "shellcode";
     sjsj = 2;
@@ -100,7 +100,7 @@ else if(strcmp(str, "linux64/reverse_tcp") == 0){
 
 // Linux x86_64
 
-else if(strcmp(str, "linux/binsh") == 0){
+else if(!strcmp(str, "linux/binsh")){
     usetxt=str;
     type = "shellcode";
     sjsj = 4;
@@ -108,7 +108,7 @@ else if(strcmp(str, "linux/binsh") == 0){
     opti="bin_sh";
 }
 
-else if(strcmp(str, "linux/read") == 0){
+else if(!strcmp(str, "linux/read")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -116,7 +116,7 @@ else if(strcmp(str, "linux/read") == 0){
     opti="read";
 }
 
-else if(strcmp(str, "linux/tcp_bind") == 0){
+else if(!strcmp(str, "linux/tcp_bind")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -124,7 +124,7 @@ else if(strcmp(str, "linux/tcp_bind") == 0){
     opti="tcp_bind";
 }
 
-else if(strcmp(str, "linux/reverse_tcp") == 0){
+else if(!strcmp(str, "linux/reverse_tcp")){
     usetxt=str;
     type = "shellcode";
     sjsj = 2;
@@ -134,7 +134,7 @@ else if(strcmp(str, "linux/reverse_tcp") == 0){
 
 // Linux ARM
 
-else if(strcmp(str, "linux_arm/binsh") == 0){
+else if(!strcmp(str, "linux_arm/binsh")){
     usetxt=str;
     type = "shellcode";
     sjsj = 4;
@@ -142,7 +142,7 @@ else if(strcmp(str, "linux_arm/binsh") == 0){
     opti="bin_sh";
 }
 
-else if(strcmp(str, "linux_arm/exec") == 0){
+else if(!strcmp(str, "linux_arm/exec")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -150,7 +150,7 @@ else if(strcmp(str, "linux_arm/exec") == 0){
     opti="exec";
 }
 
-else if(strcmp(str, "linux_arm/chmod") == 0){
+else if(!strcmp(str, "linux_arm/chmod")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -158,7 +158,7 @@ else if(strcmp(str, "linux_arm/chmod") == 0){
     opti="chmod";
 }
 
-else if(strcmp(str, "linux_arm/reverse_tcp") == 0){
+else if(!strcmp(str, "linux_arm/reverse_tcp")){
     usetxt=str;
     type = "shellcode";
     sjsj = 5;
@@ -168,7 +168,7 @@ else if(strcmp(str, "linux_arm/reverse_tcp") == 0){
 
 // Linux MIPS
 
-else if(strcmp(str, "linux_mips/binsh") == 0){
+else if(!strcmp(str, "linux_mips/binsh")){
     usetxt=str;
     type = "shellcode";
     sjsj = 4;
@@ -176,7 +176,7 @@ else if(strcmp(str, "linux_mips/binsh") == 0){
     opti="bin_sh";
 }
 
-else if(strcmp(str, "linux_mips/chmod") == 0){
+else if(!strcmp(str, "linux_mips/chmod")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -184,7 +184,7 @@ else if(strcmp(str, "linux_mips/chmod") == 0){
     opti="chmod";
 }
 
-else if(strcmp(str, "linux_mips/tcp_bind") == 0){
+else if(!strcmp(str, "linux_mips/tcp_bind")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -194,7 +194,7 @@ else if(strcmp(str, "linux_mips/tcp_bind") == 0){
 
 // Solaris x86
 
-else if(strcmp(str, "solarisx86/binsh") == 0){
+else if(!strcmp(str, "solarisx86/binsh")){
     usetxt=str;
     type = "shellcode";
     sjsj = 4;
@@ -202,7 +202,7 @@ else if(strcmp(str, "solarisx86/binsh") == 0){
     opti="bin_sh";
 }
 
-else if(strcmp(str, "solarisx86/read") == 0){
+else if(!strcmp(str, "solarisx86/read")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -210,7 +210,7 @@ else if(strcmp(str, "solarisx86/read") == 0){
     opti="read";
 }
 
-else if(strcmp(str, "solarisx86/reverse_tcp") == 0){
+else if(!strcmp(str, "solarisx86/reverse_tcp")){
     usetxt=str;
     type = "shellcode";
     sjsj = 2;
@@ -218,7 +218,7 @@ else if(strcmp(str, "solarisx86/reverse_tcp") == 0){
     opti="reverse_tcp";
 }
 
-else if(strcmp(str, "solarisx86/tcp_bind") == 0){
+else if(!strcmp(str, "solarisx86/tcp_bind")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -228,7 +228,7 @@ else if(strcmp(str, "solarisx86/tcp_bind") == 0){
 
 //Windows
 
-else if(strcmp(str, "windows/exec") == 0){
+else if(!strcmp(str, "windows/exec")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -236,7 +236,7 @@ else if(strcmp(str, "windows/exec") == 0){
     opti="exec";
 }
 
-else if(strcmp(str, "windows/messagebox") == 0){
+else if(!strcmp(str, "windows/messagebox")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -244,7 +244,7 @@ else if(strcmp(str, "windows/messagebox") == 0){
     opti="messagebox";
 }
 
-else if(strcmp(str, "windows/download&execute") == 0){
+else if(!strcmp(str, "windows/download&execute")){
     usetxt=str;
     type = "shellcode";
     sjsj = 3;
@@ -252,7 +252,7 @@ else if(strcmp(str, "windows/download&execute") == 0){
     opti="downloadandexecute";
 }
 
-else if(strcmp(str, "windows/reverse_tcp") == 0){
+else if(!strcmp(str, "windows/reverse_tcp")){
     usetxt=str;
     type = "shellcode";
     sjsj = 2;
@@ -260,7 +260,7 @@ else if(strcmp(str, "windows/reverse_tcp") == 0){
     opti="reverse_tcp";
 }
 
-else if(strcmp(str, "windows/tcp_bind") == 0){
+else if(!strcmp(str, "windows/tcp_bind")){
     usetxt=str;
     type = "shellcode"; oskaka="windows";
     sjsj = 1;
@@ -270,7 +270,7 @@ else if(strcmp(str, "windows/tcp_bind") == 0){
 
 // OSX x86
 
-else if(strcmp(str, "osx86/binsh") == 0){
+else if(!strcmp(str, "osx86/binsh")){
     usetxt=str;
     type = "shellcode";
     sjsj = 4;
@@ -278,7 +278,7 @@ else if(strcmp(str, "osx86/binsh") == 0){
     opti="bin_sh";
 }
 
-else if(strcmp(str, "osx86/tcp_bind") == 0){
+else if(!strcmp(str, "osx86/tcp_bind")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -286,7 +286,7 @@ else if(strcmp(str, "osx86/tcp_bind") == 0){
     opti="tcp_bind";
 }
 
-else if(strcmp(str, "osx86/reverse_tcp") == 0){
+else if(!strcmp(str, "osx86/reverse_tcp")){
     usetxt=str;
     type = "shellcode"; oskaka="osx86";
     sjsj = 2;
@@ -296,7 +296,7 @@ else if(strcmp(str, "osx86/reverse_tcp") == 0){
 
 // OSX x64
 
-else if(strcmp(str, "osx64/binsh") == 0){
+else if(!strcmp(str, "osx64/binsh")){
     usetxt=str;
     type = "shellcode";
     sjsj = 4;
@@ -304,7 +304,7 @@ else if(strcmp(str, "osx64/binsh") == 0){
     opti="bin_sh";
 }
 
-else if(strcmp(str, "osx64/tcp_bind") == 0){
+else if(!strcmp(str, "osx64/tcp_bind")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -312,7 +312,7 @@ else if(strcmp(str, "osx64/tcp_bind") == 0){
     opti="tcp_bind";
 }
 
-else if(strcmp(str, "osx64/reverse_tcp") == 0){
+else if(!strcmp(str, "osx64/reverse_tcp")){
     usetxt=str;
     type = "shellcode";
     sjsj = 2;
@@ -322,7 +322,7 @@ else if(strcmp(str, "osx64/reverse_tcp") == 0){
 
 // FreeBSD x86
 
-else if(strcmp(str, "FreeBSDx86/binsh") == 0){
+else if(!strcmp(str, "FreeBSDx86/binsh")){
     usetxt=str;
     type = "shellcode";
     sjsj = 4;
@@ -330,7 +330,7 @@ else if(strcmp(str, "FreeBSDx86/binsh") == 0){
     opti="bin_sh";
 }
 
-else if(strcmp(str, "FreeBSDx86/read") == 0){
+else if(!strcmp(str, "FreeBSDx86/read")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -338,7 +338,7 @@ else if(strcmp(str, "FreeBSDx86/read") == 0){
     opti="read";
 }
 
-else if(strcmp(str, "FreeBSDx86/tcp_bind") == 0){
+else if(!strcmp(str, "FreeBSDx86/tcp_bind")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -346,7 +346,7 @@ else if(strcmp(str, "FreeBSDx86/tcp_bind") == 0){
     opti="tcp_bind";
 }
 
-else if(strcmp(str, "FreeBSDx86/reverse_tcp") == 0){
+else if(!strcmp(str, "FreeBSDx86/reverse_tcp")){
     usetxt=str;
     type = "shellcode";
     sjsj = 5;
@@ -354,7 +354,7 @@ else if(strcmp(str, "FreeBSDx86/reverse_tcp") == 0){
     opti="reverse_tcp";
 }
 
-else if(strcmp(str, "FreeBSDx86/reverse_tcp2") == 0){
+else if(!strcmp(str, "FreeBSDx86/reverse_tcp2")){
     usetxt=str;
     type = "shellcode";
     sjsj = 5;
@@ -362,7 +362,7 @@ else if(strcmp(str, "FreeBSDx86/reverse_tcp2") == 0){
     opti="reverse_tcp2";
 }
 
-else if(strcmp(str, "FreeBSDx86/exec") == 0){
+else if(!strcmp(str, "FreeBSDx86/exec")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -372,7 +372,7 @@ else if(strcmp(str, "FreeBSDx86/exec") == 0){
 
 // FreeBSD x64
 
-else if(strcmp(str, "FreeBSDx64/binsh") == 0){
+else if(!strcmp(str, "FreeBSDx64/binsh")){
     usetxt=str;
     type = "shellcode";
     sjsj = 4;
@@ -380,7 +380,7 @@ else if(strcmp(str, "FreeBSDx64/binsh") == 0){
     opti="bin_sh";
 }
 
-else if(strcmp(str, "FreeBSDx64/tcp_bind") == 0){
+else if(!strcmp(str, "FreeBSDx64/tcp_bind")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;
@@ -388,7 +388,7 @@ else if(strcmp(str, "FreeBSDx64/tcp_bind") == 0){
     opti="tcp_bind";
 }
 
-else if(strcmp(str, "FreeBSDx64/reverse_tcp") == 0){
+else if(!strcmp(str, "FreeBSDx64/reverse_tcp")){
     usetxt=str;
     type = "shellcode";
     sjsj = 2;
@@ -396,7 +396,7 @@ else if(strcmp(str, "FreeBSDx64/reverse_tcp") == 0){
     opti="reverse_tcp";
 }
 
-else if(strcmp(str, "FreeBSDx64/exec") == 0){
+else if(!strcmp(str, "FreeBSDx64/exec")){
     usetxt=str;
     type = "shellcode";
     sjsj = 1;

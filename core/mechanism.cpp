@@ -1,15 +1,17 @@
 int sjsj;
 string usetxt, type, oskaka, opti;
 str =  shorter(command,4);
-if(command[4] == '\0') useCommand();
+if(command[4] == '\0'){
+    useCommand();
+}
 
 else{
 
-    if(strcmp(str, "test") == 0);
+    if(!strcmp(str, "test"));
     // Injectors
-    else if(strcmp(str, "patpat") == 0){ usetxt=str; type = "injector"; }
+    else if(!strcmp(str, "patpat")){ usetxt=str; type = "injector"; }
     // Encoders
-    else if(strcmp(str, "kaka") == 0){ usetxt=str; type = "encoder"; }
+    else if(!strcmp(str, "kaka")){ usetxt=str; type = "encoder"; }
     // Shellcodes
     #include "shellcodes/s_modules.cpp"
     // Backdoors

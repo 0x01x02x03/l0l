@@ -25,51 +25,75 @@
 
 int main(){
 
-    banner(); signal(SIGINT, ctrlcCatch); // Ctrl+C Catch
+    signal(SIGINT, ctrlcCatch); // Ctrl+C Catch
+    
+    banner(); 
 
-    do {
+    do{
         mainConsole:
         char *str;
-        string cmd;
+        string cmd="";
         rlutil::setColor(9); // Blue Color
         printf("l0l > ");
         rlutil::setColor(7); // White Color
         getline( cin, cmd );
         char* command = strdup(cmd.c_str());
         strtok(command, " ");
-
-        if      (cin.eof()) closeApp();
-        else if (strlen(command) == 0 || command[0] == '\r' || command[0] == '\n');
-        else if (strcmp(command,"help") == 0) help();
-        else if (strcmp(command,"banner") == 0) banner();
-        else if (strcmp(command,"clear") == 0) clear();
-        else if (strcmp(command,"exit") == 0) closeApp();
-        else if (strcmp(command, "use") == 0){
+        
+        if (strlen(command) == 0 || command[0] == '\r' || command[0] == '\n');
+		
+        else if (cin.eof()){
+            closeApp();
+        }
+        else if (!strcmp(command,"help")){
+            help();
+        }
+        else if (!strcmp(command,"banner")){
+            banner();
+        }
+        else if (!strcmp(command,"clear")){
+            clear();
+        }
+        else if (!strcmp(command,"exit")){
+            closeApp();
+        }
+        else if (!strcmp(command, "use")){
             #include "core/mechanism.cpp"
         }
-        else if (strcmp(command,"os") == 0){
+        else if (!strcmp(command, "os")){
             rlutil::setColor(7); // White Color
             str =  shorter(command,3);
-            if(command[3] == '\0') osCommand();
-            else
-                putchar('\n');
+            if(command[3] == '\0'){
+                osCommand();
+            } else {
                 system(str);
-                putchar('\n');
+            }
+            putchar('\n');
         }
-        else if (strcmp(command,"show") == 0){
+        else if (!strcmp(command,"show")){
             str = shorter(command,5);
-            if (command[6] == '\0')  showCommand();
+            if (command[6] == '\0') {
+                showCommand();
+            }
             else {
 
                 rlutil::setColor(2); // Green Color
 
-                if      (strcmp(str, "encoders") == 0) encoderlist();
-                else if (strcmp(str, "injectors") == 0) injectorList();
-                else if (strcmp(str, "shellcodes") == 0) shellcodeList();
-                else if (strcmp(str, "backdoors") == 0) backdoorList();
+                if (!strcmp(str, "encoders")){
+                    encoderlist();
+                }
+                else if (!strcmp(str, "injectors")){
+                    injectorList();
+                }
+                else if (!strcmp(str, "shellcodes")){
+                    shellcodeList();
+                }
+                else if (!strcmp(str, "backdoors")){
+                    backdoorList();
+                }
                 else {
-                        rlutil::setColor(12); // Red Color
-                        printf("[-] Unknown type: %s\n", str);
+                    rlutil::setColor(12); // Red Color
+                    printf("[-] Unknown type: %s\n", str);
                 }
             }
         }
@@ -78,7 +102,7 @@ int main(){
             printf("[-] Unknown command: %s\n", command);
         }
 
-    } while(1);
+    }while(1);
 
     return 0;
 }

@@ -1,4 +1,4 @@
-do {
+do{
     string scmd, controller;
     char *str2, *str3;
 
@@ -22,23 +22,41 @@ do {
     char* usecmd2 = strdup(scmd.c_str());
     char* usecmd3 = strdup(scmd.c_str());
 
-    strcpy(usecmd2,usecmd); strtok(usecmd2, " "); string modulen = str;
+    strcpy(usecmd2,usecmd); 
+    strtok(usecmd2, " "); 
+    string modulen = str;
 
-    if      (cin.eof()) closeApp();
-    else if (strlen(usecmd) == 0 || usecmd[0] == '\r' || usecmd[0] == '\n');
-    else if (strcmp(usecmd, "back") == 0) goto mainConsole;
-    else if (strcmp(usecmd, "help") == 0) shellcodeHelp();
-    else if (strcmp(usecmd,"banner") == 0) banner();
-    else if (strcmp(usecmd,"exit") == 0) closeApp();
-    else if (strcmp(usecmd, "clear") == 0) clear();
-    else if (strcmp(usecmd2,"os") == 0){
+    if (strlen(usecmd) == 0 || usecmd[0] == '\r' || usecmd[0] == '\n');
+
+    else if (cin.eof()){
+        closeApp();
+    } 
+    else if (!strcmp(usecmd, "back")){
+        goto mainConsole;
+    }
+    else if (!strcmp(usecmd, "help")){
+        shellcodeHelp();
+    }
+    else if (!strcmp(usecmd,"banner")){
+        banner();
+    }
+    else if (!strcmp(usecmd,"exit")){
+        closeApp();
+    }
+    else if (!strcmp(usecmd, "clear")){
+        clear();
+    }
+    else if (!strcmp(usecmd2,"os")){
         rlutil::setColor(15); // White Color
         str2 =  shorter(usecmd,3);
-        if (usecmd[3] == '\0') osCommand();
-        else system(str2);
+        if (usecmd[3] == '\0'){
+            osCommand();
+        } else { 
+            system(str2);
+        }
         putchar('\n');
     }
-    else if(strcmp(usecmd, "show options") == 0){
+    else if(!strcmp(usecmd, "show options")){
         rlutil::setColor(2); // Green Color
         cout <<
                 "\n\tModule options (" << modulen << "):\n\n"
@@ -73,7 +91,7 @@ do {
        else{ cout << "\t\tNo option. Just use generate.\n\n"; }
 
     }
-    else if (strcmp(usecmd2, "set") == 0){
+    else if (!strcmp(usecmd2, "set")){
         rlutil::setColor(7); // White Color
         str2 = shorter(usecmd2,4);
         if (opti == "exec"){
@@ -125,7 +143,7 @@ do {
             } else { rlutil::setColor(12); cout << "This option is not available.\n"; }
        }
     }
-    else if(strcmp(usecmd2, "unset") == 0){
+    else if(!strcmp(usecmd2, "unset")){
         str2 = shorter(usecmd2,6);
         if(opti == "exec"){
             if( str2[0] == 'c' && str2[1] == 'o' && str2[2] == 'm' && str2[3] == 'm' && str2[4] == 'a' && str2[5] == 'n' && str2[6] == 'd' ){
@@ -162,7 +180,7 @@ do {
             } else { rlutil::setColor(12); cout << "This option is not available.\n"; }
         }
     }
-    else if(strcmp(usecmd, "generate") == 0){
+    else if(!strcmp(usecmd, "generate")){
         rlutil::setColor(7); // White Color
         if(sjsj == 1){
             if(args1 == "None"){ cout << "\nSet option before generate shellcode.\n\n"; }
@@ -183,7 +201,7 @@ do {
         }
 
     }
-    else if(strcmp(usecmd2, "output") == 0){
+    else if(!strcmp(usecmd2, "output")){
         rlutil::setColor(7); // White Color
         str2 = shorter(usecmd2,7);
         controller = str2;
@@ -300,4 +318,4 @@ do {
         printf("[-] Unknown command: %s\n", usecmd);
     }
 
-} while(1);
+}while(1);

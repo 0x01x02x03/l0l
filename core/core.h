@@ -21,7 +21,7 @@ using namespace std;
 
 #ifdef __unix__
 #elif defined(_WIN32) || defined(WIN32)
-#define OS_Windows
+#define nt
 #endif
 
 /* lib */

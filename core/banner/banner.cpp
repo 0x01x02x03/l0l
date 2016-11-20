@@ -10,13 +10,27 @@ void banner(){
     int x = rand() % 5 + 1 ;
     char kaka;
     FILE *fp;
-    if(x == 1) fp = fopen("core/banner/logo1.txt","r");
-    else if(x == 2) fp = fopen("core/banner/logo2.txt", "r");
-    else if(x == 3) fp = fopen("core/banner/logo3.txt", "r");
-    else if(x == 4) fp = fopen("core/banner/logo4.txt", "r");
-    else if(x == 5) fp = fopen("core/banner/logo5.txt", "r");
+    if(x == 1) {
+        fp = fopen("core/banner/logo1.txt","r");
+    } 
+    else if(x == 2){
+        fp = fopen("core/banner/logo2.txt", "r");
+    }
+    else if(x == 3){
+        fp = fopen("core/banner/logo3.txt", "r");
+    }
+    else if(x == 4){
+        fp = fopen("core/banner/logo4.txt", "r");
+    }
+    else if(x == 5){
+        fp = fopen("core/banner/logo5.txt", "r");
+    }
+
     rlutil::setColor(12); // Red Color
-    while((kaka = fgetc(fp))!=EOF) printf("%c",kaka);
+    
+    while((kaka = fgetc(fp))!=EOF){
+        printf("%c",kaka);
+    }
     
     fclose(fp);
 

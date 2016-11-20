@@ -1,6 +1,6 @@
 
 void clear(){
-    #ifdef OS_Windows
+    #ifdef nt
         system("cls");
     #else
         system("clear");
@@ -114,9 +114,7 @@ void osCommand(){
 }
 
 void showCommand(){
-
-    // Set Green Color
-    rlutil::setColor(2);
+	rlutil::setColor(2); // Green Color
     cout <<
             "\nshow Command\n"
             "============\n"
@@ -134,8 +132,7 @@ void showCommand(){
 
 
 void useCommand(){
-
-    rlutil::setColor(2);
+    rlutil::setColor(2); // Green Color
     cout <<
             "\nuse Command\n"
             "===========\n"
@@ -147,9 +144,7 @@ void useCommand(){
 }
 
 void outputCommand(){
-
-    // Set Green Color
-    rlutil::setColor(2);
+    rlutil::setColor(2); // Green Color
     cout <<
             "\noutput Command\n"
             "============\n"
@@ -165,5 +160,5 @@ void outputCommand(){
             "\traw\t: Raw File\n"
             "\tpy\t: Python File\n"
             "\tdll\t: Dll Source (Windows)\n\n";
-
+			
 }

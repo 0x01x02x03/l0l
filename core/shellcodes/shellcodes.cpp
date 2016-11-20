@@ -65,7 +65,7 @@ void genshellcode(int argp, string os, string type, string a1, string a2)
 
     cout << "\n";
 
-    #ifdef OS_Windows
+    #ifdef nt
         system("python session.py");
     #else
         system("python2 session.py");
@@ -340,21 +340,20 @@ void output(int argp, string outype, string os, string type, string a1, string a
     rlutil::setColor(2);
 
     char filename[] = "session.py";
-    std::ofstream outfile (filename);
+    std::ofstream outfile(filename);
     outfile << session;
     outfile.close();
 
-    cout << "\n";
+    putchar('\n');
 
-    #ifdef OS_Windows
+    #ifdef nt
         system("python session.py");
     #else
         system("python2 session.py");
     #endif
-
-
-    cout << "\n";
-    remove("session.py");
-
-
+	
+    putchar('\n');
+    
+	remove("session.py");
+	
 }

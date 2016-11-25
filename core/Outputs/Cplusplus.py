@@ -1,18 +1,10 @@
-#------------------------------------------------------------------#
-#Author  : roissy
-#Greetz  : b3mb4m
-#Concat  : roissy@tuta.io
-#Project : https://github.com/roissy/l0l
-#LICENSE : https://github.com/roissy/l0l/blob/master/LICENSE
-#------------------------------------------------------------------#
-
 import time
 from header import *
 
 #For windows. 
 def CplusplusFile( shellcode, win=False):
     if win == True:
-        db = """//Project : https://github.com/roissy/l0l
+        db = """//Project : https://github.com/m3pt0r/l0l
 //This file created with l0l ..
 //%s - %s
 //Compile : gcc shell.c -o shell.exe

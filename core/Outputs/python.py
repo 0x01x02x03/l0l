@@ -1,11 +1,3 @@
-#------------------------------------------------------------------#
-#Author  : roissy
-#Greetz  : b3mb4m
-#Concat  : roissy@tuta.io
-#Project : https://github.com/roissy/l0l
-#LICENSE : https://github.com/roissy/l0l/blob/master/LICENSE
-#------------------------------------------------------------------#
-
 import time
 from header import *
 
@@ -15,7 +7,7 @@ def PyFile( shellcode):
 import ctypes
 import multiprocessing
 
-#Project : https://github.com/roissy/l0l
+#Project : https://github.com/m3pt0r/l0l
 #This file created with l0l ..
 #{0} - {1}
 

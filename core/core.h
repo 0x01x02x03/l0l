@@ -16,8 +16,7 @@
 
 using namespace std;
 
-
-/* Os */
+/* Operating System detect (nt) or (nt') os's. */
 
 #ifdef __unix__
 #elif defined(_WIN32) || defined(WIN32)

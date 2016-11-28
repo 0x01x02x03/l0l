@@ -2,21 +2,13 @@ do{
     string bcmd;
     char *str2, *str3;
 
-    rlutil::setColor(9);    // Blue Color
-    cout << "l0l";
-    rlutil::setColor(8);    // Gray Color
-    cout << ":";
-    rlutil::setColor(7);    // White Color
-    cout << "backdoor(";
-    rlutil::setColor(12);   // Red Color
-    cout << parsermodule;
-    rlutil::setColor(7);    // White Color
-    cout << ")";
-    rlutil::setColor(9);    // Blue Color
-    cout << " > ";
-    rlutil::setColor(7);    // White Color
-
-    getline(cin, bcmd);
+    blue(); cout << "l0l";
+    gray(); cout << ":";
+    white(); cout << "backdoor(";
+    red(); cout << parsermodule;
+    white(); cout << ")";
+    blue(); cout << " > ";
+    white(); getline(cin, bcmd);
 
     char* usecmd = strdup(bcmd.c_str());
     char* usecmd2 = strdup(bcmd.c_str());
@@ -28,9 +20,6 @@ do{
 
     if (strlen(usecmd) == 0|| usecmd[0] == '\r' || usecmd[0] == '\n');
     
-    else if (cin.eof()){ 
-        closeApp();
-    }
     else if (!strcmp(usecmd, "back")){
         goto mainConsole;
     }
@@ -40,14 +29,14 @@ do{
     else if (!strcmp(usecmd,"banner")){
         banner();
     }
-    else if (!strcmp(usecmd,"exit")){
+    else if (!strcmp(usecmd,"exit") || cin.eof()){
         closeApp();
     }
     else if (!strcmp(usecmd, "clear")){
         clear();
     }
     else if (!strcmp(usecmd2,"os")){
-        rlutil::setColor(7); // White Color
+        white();
         str2 =  shorter(usecmd,3);
         if (usecmd[3] == '\0'){
             osCommand();
@@ -58,8 +47,7 @@ do{
     }
     else if (!strcmp(usecmd, "show options")){
 
-        rlutil::setColor(2);
-        cout <<
+        green(); cout <<
                 "\n\tModule options (" << modulen << "):\n\n"
                 "\t\tName\t" << "\tDescription" << "\t\tCurrent Setting\n"
                 "\t\t----\t" << "\t-----------" << "\t\t---------------\n"
@@ -68,7 +56,7 @@ do{
 
     }
     else if (!strcmp(usecmd2, "set")){
-        rlutil::setColor(7); // White Color
+        white();
         str2 = shorter(usecmd2,4);
 
         if ( str2[0] == 'L' && str2[1] == 'H' && str2[2] == 'O' && str2[3] == 'S' && str2[4] == 'T' && str2[5] == ' ' ){
@@ -82,8 +70,7 @@ do{
             cout << "\nLPORT => " << str3 << "\n\n";
         }
         else {
-            rlutil::setColor(12); // Red Color
-            cout << "This option is not available.\n";
+            red(); cout << "This option is not available.\n";
         }
     }
     else if (!strcmp(usecmd2, "unset")){
@@ -96,18 +83,16 @@ do{
             lport = "None";
         }
         else {
-            rlutil::setColor(12); // Red Color
-            cout << "This option is not available.\n";
+            red(); cout << "This option is not available.\n";
         }
     }
     else if (!strcmp(usecmd, "generate")){
-        rlutil::setColor(7); // White Color
+        white();
         if (lhost == "None" || lport == "None") cout << "\nSet options before generate payload.\n\n";
         else scriptPayloads(str, lhost, lport);
     }
     else {
-        rlutil::setColor(12); // Red Color
-        printf("[-] Unknown command: %s\n", usecmd);
+        red(); printf("[-] Unknown command: %s\n", usecmd);
     }
 
 }while(1);

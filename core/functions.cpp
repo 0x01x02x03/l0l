@@ -1,4 +1,22 @@
 
+///////////////////////////// Colors ////////////////////////////////
+void green(){
+    rlutil::setColor(2);
+}
+void white(){ 
+    rlutil::setColor(7);
+}
+void blue(){
+    rlutil::setColor(9);
+}
+void red(){
+    rlutil::setColor(12);
+}
+void gray(){
+    rlutil::setColor(8);
+}
+/////////////////////////////////////////////////////////////////////
+
 void clear(){
     #ifdef nt
         system("cls");
@@ -8,23 +26,23 @@ void clear(){
 }
 
 void closeApp(){
-    rlutil::setColor(7); // White Color
-    printf("\nThanks for using l0l.\n");
+    white(); printf("\nThanks for using l0l. See you. (:\n\n");
     exit(0);
 }
 
 void ctrlcCatch(int qwe) {
     signal(SIGINT, ctrlcCatch);
-    rlutil::setColor(7); // White Color
-    printf("\nCtrl + C Detected. Trying to exit..\n");
+    white(); printf("\nCtrl + C Detected. Trying to exit..\n");
     exit(0);
 }
 
-char* shorter(char *bilik, int p){ bilik+=p; return bilik; }
+char *shorter(char *str, int p){ 
+    str+=p; 
+    return str; 
+}
 
 void help(){
-    rlutil::setColor(2); // Green Color
-   	cout <<
+    green(); cout <<
             "\nUsage Commands\n"
             "===============\n"
             "\t    Commands\t\tDescription\n"
@@ -42,8 +60,7 @@ void help(){
             "\t    exit    \t\tClose Application\n\n";
 }
 void injectorHelp(){
-    rlutil::setColor(2); // Green Color
-    cout <<
+    green(); cout <<
             "\nInjector Commands\n"
             "=================\n"
             "\t    Commands\t\tDescription\n"
@@ -54,8 +71,7 @@ void injectorHelp(){
             "\t    exit    \t\tClose Application\n\n";
 }
 void encoderHelp(){
-    rlutil::setColor(2); // Green Color
-    cout <<
+    green(); cout <<
             "\nEncoder Commands\n"
             "================\n"
             "\t    Commands\t\tDescription\n"
@@ -67,8 +83,7 @@ void encoderHelp(){
 }
 
 void shellcodeHelp(){
-    rlutil::setColor(2); // Green Color
-    cout <<
+    green(); cout <<
             "\nShellcode Commands\n"
             "==================\n"
             "\t    Commands\t\tDescription\n"
@@ -86,8 +101,7 @@ void shellcodeHelp(){
 }
 
 void backdoorHelp(){
-    rlutil::setColor(2); // Green Color
-    cout <<
+    green(); cout <<
             "\nBackdoor Commands\n"
             "=================\n"
             "\t    Commands\t\tDescription\n"
@@ -104,8 +118,7 @@ void backdoorHelp(){
 }
 
 void osCommand(){
-    rlutil::setColor(2); // Green Color
-    cout <<
+    green(); cout <<
             "\nos Command\n"
             "============\n"
             "\tDescription: Command directly ur computer\n"
@@ -114,8 +127,7 @@ void osCommand(){
 }
 
 void showCommand(){
-	rlutil::setColor(2); // Green Color
-    cout <<
+    green(); cout <<
             "\nshow Command\n"
             "============\n"
             "\tDescription: The specified module type list.\n"
@@ -132,8 +144,7 @@ void showCommand(){
 
 
 void useCommand(){
-    rlutil::setColor(2); // Green Color
-    cout <<
+    green(); cout <<
             "\nuse Command\n"
             "===========\n"
             "\tDescription: Execute the specified module.\n"
@@ -144,8 +155,7 @@ void useCommand(){
 }
 
 void outputCommand(){
-    rlutil::setColor(2); // Green Color
-    cout <<
+    green(); cout <<
             "\noutput Command\n"
             "============\n"
             "\tDescription: Shellcode Output Type.\n"
@@ -160,5 +170,6 @@ void outputCommand(){
             "\traw\t: Raw File\n"
             "\tpy\t: Python File\n"
             "\tdll\t: Dll Source (Windows)\n\n";
-			
+            
 }
+

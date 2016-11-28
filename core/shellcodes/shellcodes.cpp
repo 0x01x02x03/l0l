@@ -72,7 +72,7 @@ void genshellcode(int argp, string os, string type, string a1, string a2)
     #endif
 
 
-    cout << "\n";
+    putchar('\n');
     remove("session.py");
 
 
@@ -337,7 +337,7 @@ void output(int argp, string outype, string os, string type, string a1, string a
 
     }
 
-    rlutil::setColor(2);
+    green();
 
     char filename[] = "session.py";
     std::ofstream outfile(filename);

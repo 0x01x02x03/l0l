@@ -2,21 +2,13 @@ do{
     string scmd, controller;
     char *str2, *str3;
 
-    rlutil::setColor(9);    // Blue Color
-    cout << "l0l";
-    rlutil::setColor(8);    // Gray Color
-    cout << ":";
-    rlutil::setColor(7);    // White Color
-    cout << "shellcode(";
-    rlutil::setColor(12);   // Red Color
-    cout << usetxt;
-    rlutil::setColor(7);    // White Color
-    cout << ")";
-    rlutil::setColor(9);    // Blue Color
-    cout << " > ";
-    rlutil::setColor(7);    // White Color
-
-    getline(cin, scmd);
+    blue(); cout << "l0l";
+    gray(); cout << ":";
+    white(); cout << "shellcode(";
+    red(); cout << usetxt;
+    white(); cout << ")";
+    blue(); cout << " > ";
+    white(); getline(cin, scmd);
 
     char* usecmd = strdup(scmd.c_str());
     char* usecmd2 = strdup(scmd.c_str());
@@ -27,10 +19,7 @@ do{
     string modulen = str;
 
     if (strlen(usecmd) == 0 || usecmd[0] == '\r' || usecmd[0] == '\n');
-
-    else if (cin.eof()){
-        closeApp();
-    } 
+    
     else if (!strcmp(usecmd, "back")){
         goto mainConsole;
     }
@@ -40,14 +29,14 @@ do{
     else if (!strcmp(usecmd,"banner")){
         banner();
     }
-    else if (!strcmp(usecmd,"exit")){
+    else if (!strcmp(usecmd,"exit") || cin.eof()){
         closeApp();
     }
     else if (!strcmp(usecmd, "clear")){
         clear();
     }
     else if (!strcmp(usecmd2,"os")){
-        rlutil::setColor(15); // White Color
+        white();
         str2 =  shorter(usecmd,3);
         if (usecmd[3] == '\0'){
             osCommand();
@@ -57,7 +46,7 @@ do{
         putchar('\n');
     }
     else if(!strcmp(usecmd, "show options")){
-        rlutil::setColor(2); // Green Color
+        green();
         cout <<
                 "\n\tModule options (" << modulen << "):\n\n"
                 "\t\tName\t" << "\tDescription" << "\t\tCurrent Setting\n"
@@ -92,35 +81,35 @@ do{
 
     }
     else if (!strcmp(usecmd2, "set")){
-        rlutil::setColor(7); // White Color
+        white();
         str2 = shorter(usecmd2,4);
         if (opti == "exec"){
             if (str2[0] == 'c' && str2[1] == 'o' && str2[2] == 'm' && str2[3] == 'm' && str2[4] == 'a' && str2[5] == 'n' && str2[6] == 'd' && str2[7] == ' ' ){
                 str3 = shorter(str2,8);
                 args1 = str3;
                 cout << "\ncommand => " << str3 << "\n\n";
-            } else { rlutil::setColor(12); cout << "This option is not available.\n"; }
+            } else { red(); cout << "This option is not available.\n"; }
         }
         else if (opti == "download&exec" || opti == "downloadandexecute"){
             if (str2[0] == 'l' && str2[1] == 'i' && str2[2] == 'n' && str2[3] == 'k' && str2[4] == ' ' ){
                 str3 = shorter(str2,5);
                 args1 = str3;
                 cout << "\nlink => " << str3 << "\n\n";
-            } else { rlutil::setColor(12); cout << "This option is not available.\n"; }
+            } else { red(); cout << "This option is not available.\n"; }
         }
         else if(opti == "read" || opti == "chmod"){
             if(str2[0] == 'f' && str2[1] == 'i' && str2[2] == 'l' && str2[3] == 'e' && str2[4] == ' ' ){
                 str3 = shorter(str2,5);
                 args1 = str3;
                 cout << "\nfile => " << str3 << "\n\n";
-            } else { rlutil::setColor(12); cout << "This option is not available.\n"; }
+            } else { red(); cout << "This option is not available.\n"; }
         }
         else if(opti == "tcp_bind"){
             if(str2[0] == 'p' && str2[1] == 'o' && str2[2] == 'r' && str2[3] == 't' && str2[4] == ' '){
                 str3 = shorter(str2,5);
                 args1 = str3;
                 cout << "\nport => " << str3 << "\n\n";
-            } else { rlutil::setColor(12); cout << "This option is not available.\n"; }
+            } else { red(); cout << "This option is not available.\n"; }
         }
         else if(opti == "reverse_tcp" || opti == "reverse_tcp2"){
             if(str2[0] == 'h' && str2[1] == 'o' && str2[2] == 's' && str2[3] == 't' && str2[4] == ' ' ){
@@ -132,7 +121,7 @@ do{
                 str3 = shorter(str2,5);
                 args2 = str3;
                 cout << "\nport => " << str3 << "\n\n";
-            } else { rlutil::setColor(12); cout << "This option is not available.\n"; }
+            } else { red(); cout << "This option is not available.\n"; }
         }
         else if(opti == "messagebox"){
 
@@ -140,7 +129,7 @@ do{
                 str3 = shorter(str2,8);
                 args1 = str3;
                 cout << "\nmessage => " << str3 << "\n\n";
-            } else { rlutil::setColor(12); cout << "This option is not available.\n"; }
+            } else { red(); cout << "This option is not available.\n"; }
        }
     }
     else if(!strcmp(usecmd2, "unset")){
@@ -149,22 +138,22 @@ do{
             if( str2[0] == 'c' && str2[1] == 'o' && str2[2] == 'm' && str2[3] == 'm' && str2[4] == 'a' && str2[5] == 'n' && str2[6] == 'd' ){
                 args1 = "None";
             }
-            else { rlutil::setColor(12); cout << "This option is not available.\n"; }
+            else { red(); cout << "This option is not available.\n"; }
         }
         else if(opti == "download&exec" || opti == "downloadandexecute"){
             if( str2[0] == 'l' && str2[1] == 'i' && str2[2] == 'n' && str2[3] == 'k' ){
                 args1 = "None";
-            } else { rlutil::setColor(12); cout << "This option is not available.\n"; }
+            } else { red(); cout << "This option is not available.\n"; }
         }
         else if(opti == "read" || opti == "chmod"){
             if( str2[0] == 'f' && str2[1] == 'i' && str2[2] == 'l' && str2[3] == 'e' ){
                 args1 = "None";
-            } else { rlutil::setColor(12); cout << "This option is not available.\n"; }
+            } else { red(); cout << "This option is not available.\n"; }
         }
         else if(opti == "tcp_bind"){
             if(str2[0] == 'p' && str2[1] == 'o' && str2[2] == 'r' && str2[3] == 't' ){
                 args1 = "None";
-            } else { rlutil::setColor(12); cout << "This option is not available.\n"; }
+            } else { red(); cout << "This option is not available.\n"; }
         }
         else if(opti == "reverse_tcp" || opti == "reverse_tcp2"){
             if( str2[0] == 'h' && str2[1] == 'o' && str2[2] == 's' && str2[3] == 't' ) {
@@ -172,16 +161,16 @@ do{
             }
             else if(str2[0] == 'p' && str2[1] == 'o' && str2[2] == 'r' && str2[3] == 't' ){
                 args2 = "None";
-            } else { rlutil::setColor(12); cout << "This option is not available.\n"; }
+            } else { red(); cout << "This option is not available.\n"; }
         }
         else if(opti == "messagebox"){
             if( str2[0] == 'm' && str2[1] == 'e' && str2[2] == 's' && str2[3] == 's' && str2[4] == 'a' && str2[5] == 'g' && str2[6] == 'e' ){
                 args1 = "None";
-            } else { rlutil::setColor(12); cout << "This option is not available.\n"; }
+            } else { red(); cout << "This option is not available.\n"; }
         }
     }
     else if(!strcmp(usecmd, "generate")){
-        rlutil::setColor(7); // White Color
+        white();
         if(sjsj == 1){
             if(args1 == "None"){ cout << "\nSet option before generate shellcode.\n\n"; }
             else{ genshellcode(sjsj, oskaka, opti, args1, args2); }
@@ -202,7 +191,7 @@ do{
 
     }
     else if(!strcmp(usecmd2, "output")){
-        rlutil::setColor(7); // White Color
+        white();
         str2 = shorter(usecmd2,7);
         controller = str2;
 
@@ -314,8 +303,7 @@ do{
 
     }
     else{
-        rlutil::setColor(12); // Red Color
-        printf("[-] Unknown command: %s\n", usecmd);
+        red(); printf("[-] Unknown command: %s\n", usecmd);
     }
 
 }while(1);

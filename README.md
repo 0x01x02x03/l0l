@@ -7,7 +7,7 @@ We'll give you more.
 
 ##Installation
 
-Unix/Linux:
+Linux:
 
 Requirements: g++ and Python 2
 

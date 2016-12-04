@@ -58,11 +58,11 @@ Inline arguments:
 	exit               : Close Application
 ```
 
-##Bugs:
+##Bugs
 
 Please Report bugs! with Jabber, E-Mail, Pull Request etc.
 
-##Contact:
+##Contact
 
 E-Mail : m3pt0r@protonmail.com
 

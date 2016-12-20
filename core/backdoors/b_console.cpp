@@ -14,18 +14,18 @@ do{
     char* usecmd2 = strdup(bcmd.c_str());
     char* usecmd3 = strdup(bcmd.c_str());
 
-    strcpy(usecmd2,usecmd); 
-    strtok(usecmd2, " "); 
+    strcpy(usecmd2,usecmd);
+    strtok(usecmd2, " ");
     string modulen = str;
 
     if (strlen(usecmd) == 0|| usecmd[0] == '\r' || usecmd[0] == '\n');
-    
+
     else if (!strcmp(usecmd, "back")){
         goto mainConsole;
     }
     else if (!strcmp(usecmd, "help")){
         backdoorHelp();
-    } 
+    }
     else if (!strcmp(usecmd,"banner")){
         banner();
     }
@@ -41,8 +41,8 @@ do{
         if (usecmd[3] == '\0'){
             osCommand();
         } else {
-            system(str2);  
-        } 
+            system(str2);
+        }
         putchar('\n');
     }
     else if (!strcmp(usecmd, "show options")){

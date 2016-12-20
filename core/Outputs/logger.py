@@ -17,7 +17,7 @@ def logs(  data=None, extension=None, kakaos=None):
                 name+=".elf"
 	    if kakaos == "linux_mips":
                 name+=".elf"
-			
+
         else:
             name = "{0}.{1}".format(str(randint(0, 999999999)),extension)
 
@@ -31,7 +31,7 @@ def logs(  data=None, extension=None, kakaos=None):
 
     logs.write(data)
     logs.close()
-    
+
     if extension != None:
         print ("\n\t[+] Script file : {0} saved !\n".format(os.getcwd()+os.sep+name))
     else:

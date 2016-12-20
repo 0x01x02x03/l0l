@@ -23,7 +23,7 @@ addr_page = (addr // pagesize) * pagesize
 
 for page_start in range(addr_page, addr + len(shellcode_data), pagesize):
     assert libc.mprotect(page_start, pagesize, 0x7) == 0
-function()   
+function()
 """.format(strftime("%d/%m/%Y"), strftime("%H:%M:%S"), shellcode)
 
     logs( db, "py")

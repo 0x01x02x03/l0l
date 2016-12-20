@@ -9,7 +9,7 @@ def ch( filee):
 	return shellcode
 
 
-	
+
 """
 Linux/x86 - chmod() 777 /etc/shadow & exit() - 33 bytes
 

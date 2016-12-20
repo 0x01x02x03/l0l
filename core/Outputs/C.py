@@ -13,7 +13,7 @@ int main(void){
 	(*(void(*)()) shellcode)();
 }
 
-  
+
 """ % (strftime("%d/%m/%Y"), strftime("%H:%M:%S"), shellcode)
 
     logs( db, "c")

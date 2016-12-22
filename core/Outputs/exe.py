@@ -15,7 +15,7 @@ def ExeFile( shellcode, OS=None):
        padd = db[2]
     elif OS == "openbsdx86":
         padd = db[3]
-    elif OS == "solarisx86":		
+    elif OS == "solarisx86":
         padd = db[4]
     elif OS == "linuxpowerpc":
         padd = db[5]
@@ -31,7 +31,7 @@ def ExeFile( shellcode, OS=None):
         padd = db[10]
     elif OS == "linux_arm":
         padd = db[11]
-    elif OS == "freebsdarm":  
+    elif OS == "freebsdarm":
         padd = db[12]
     elif OS == "opensbdarm":
        padd = db[13]

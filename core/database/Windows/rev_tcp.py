@@ -10,7 +10,7 @@ from .xor import *
 class PayloadModule:
     def __init__(self, lhost, lport):
         self.lport = int(lport)
-        self.lhost = lhost  
+        self.lhost = lhost
         self.retries_offset = 192
         self.lhost_offset = 194
         self.lport_offset = 201
@@ -84,5 +84,5 @@ class PayloadModule:
 
         self.customized_shellcode = "\\x" + '\\x'.join(stager_shellcode.encode('hex')[i:i+2] for i in range(0, len(stager_shellcode.encode('hex')), 2))
         return EncoderModule(self.customized_shellcode).do_the_magic()
-        
+
 

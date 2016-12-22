@@ -8,7 +8,7 @@ do{
     red(); cout << usetxt;
     white(); cout << ")";
     blue(); cout << " > ";
-    white(); getline(cin, icmd); 
+    white(); getline(cin, icmd);
     char* usecmd = strdup(icmd.c_str());
 
     if (strlen(usecmd) == 0 || usecmd[0] == '\r' || usecmd[0] == '\n');

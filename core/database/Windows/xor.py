@@ -39,7 +39,7 @@ class EncoderModule:
             final_bad_chars = []
             #bad_characters = bad_characters.split('x')
             bad_characters = bad_characters.split("\\x")
-            bad_characters = bad_characters[1:] 
+            bad_characters = bad_characters[1:]
 
             # Do some validation on the received characters
             for item in bad_characters:

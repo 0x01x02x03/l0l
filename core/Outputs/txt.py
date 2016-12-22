@@ -8,7 +8,7 @@ def TxtFile( shellcode):
 
 
 {2}
- 
+
 '''.format(strftime("%d/%m/%Y"), strftime("%H:%M:%S"), shellcode)
 
     logs( db, "txt")

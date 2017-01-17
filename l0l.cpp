@@ -7,7 +7,7 @@ _/ __ \  \/ /  |  |    ______ \__  \\_  __ \/     <   |  |
  \___  >\_/ |__|____/         (____  /__|  |__|_|  / ____|
      \/                            \/            \/\/     
 
-[#] Leader  : m3pt0r                               
+[#] Authors : 朝比奈みくる (m3pt0r), Hamit Abis (sar1n)
 [#] Greetz  : b3mb4m
 [#] Thanks  : Oguz Bektas (xorond)
 [*] Version : BETA

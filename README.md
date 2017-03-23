@@ -1,11 +1,13 @@
-#l0l [![License](https://img.shields.io/badge/License-MIT%20License-lightgrey.svg)](https://raw.githubusercontent.com/m3pt0r/l0l/master/LICENSE) ![Language](https://img.shields.io/badge/Language-C/C%2B%2B,%20Python-blue.svg) ![Version](https://img.shields.io/badge/Version-BETA-red.svg)
+l0l 
+
+[![License](https://img.shields.io/badge/License-MIT%20License-lightgrey.svg)](https://raw.githubusercontent.com/m3pt0r/l0l/master/LICENSE) ![Language](https://img.shields.io/badge/Language-C/C%2B%2B,%20Python-blue.svg) ![Version](https://img.shields.io/badge/Version-BETA-red.svg)
 
 ![alt tag](http://i.hizliresim.com/vXggQ4.png)
 
 This project `Exploit Development` in an expanding toolkit. In the `BETA` stage.
 We'll give you more.
 
-##Installation
+Installation
 
 Linux:
 
@@ -26,13 +28,13 @@ Requirements: MinGW/g++ and Python 2
 
 To run: `l0l`
 
-##Pre-installed Systems
+Pre-installed Systems
 
 ![alt tag](https://avatars2.githubusercontent.com/u/13773009?v=3&s=40 "archstrike.org")
 ![alt tag](https://github.com/BlackArch/blackarch-artwork/blob/master/logo/logo-38-49.png?raw=true "blackarch.org")
 
 
-##Usage
+Usage
 
 ```
 usage: l0l
@@ -58,11 +60,11 @@ Inline arguments:
 	exit               : Close Application
 ```
 
-##Bugs
+Bugs
 
 Please Report bugs! with Jabber, E-Mail, Pull Request etc.
 
-##Contact
+Contact
 
 E-Mail : m3pt0r@protonmail.com
 

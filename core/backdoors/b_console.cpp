@@ -21,7 +21,7 @@ do{
     if (strlen(usecmd) == 0|| usecmd[0] == '\r' || usecmd[0] == '\n');
 
     else if (!strcmp(usecmd, "back")){
-        goto mainConsole;
+        goto x;
     }
     else if (!strcmp(usecmd, "help")){
         backdoorHelp();

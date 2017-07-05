@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT%20License-lightgrey.svg)](https://raw.githubusercontent.com/m3pt0r/l0l/master/LICENSE) ![Language](https://img.shields.io/badge/Language-C/C%2B%2B,%20Python-blue.svg) ![Version](https://img.shields.io/badge/Version-BETA-red.svg)
 
-![alt tag](http://i.hizliresim.com/vXggQ4.png)
+![alt tag](https://i.hizliresim.com/qWbWJZ.png)
 
 This project `Exploit Development` in an expanding toolkit. In the `BETA` stage.
 We'll give you more.

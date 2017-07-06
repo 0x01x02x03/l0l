@@ -8,7 +8,7 @@
 |_|\___/|_| |_| |_|  \__,_|_| |_| |_|\___| \_/\_/ \___/|_|  |_|\_\
                                                                    
 
-[#] Authors : m3pt0r, Hamit Abis (sar1n)
+[#] Authors : m3pt0r, Hamit Abis
 [#] Greetz  : b3mb4m
 [#] Thanks  : Oguz Bektas (xorond)
 [*] Version : BETA

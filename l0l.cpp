@@ -42,8 +42,12 @@ SOFTWARE.
 -----------------------------------------------------------------------------
 ////////////////////////////////////////////////////////////////////////// */
 
-/* C Headers */
+/* Headers */
 
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <fstream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -51,16 +55,9 @@ SOFTWARE.
 #include <signal.h>
 #include <unistd.h>
 
-/* C++ Headers */
-
-#include <iostream>
-#include <string>
-#include <algorithm>
-#include <fstream>
-
 using namespace std;
 
-/* Operating System detect (nt) or (nt') os's. */
+/* nt or *nix detect */
 
 #ifdef __unix__
 #elif defined(_WIN32) || defined(WIN32)
@@ -74,9 +71,165 @@ using namespace std;
 /* Core */
 
 #include "core/banner/banner.cpp"
-#include "core/lists.cpp"
 
 /* Functions*/
+
+
+void noModule()
+{
+
+    cout << "\n\t There's no module. (:\n\n";
+
+}
+
+void encoderlist()
+{
+
+    cout <<
+            "\n\tName\t\tRank\t\tDescription\n"
+            "\t----\t\t----\t\t-----------\n\n"
+            "\tkaka\t\t\t\tTest Module\n\n";
+
+}
+
+void injectorList()
+{
+
+    cout <<
+            "\n\tArchitecture\t\t\tVersion\n"
+            "\t------------\t\t\t-------\n\n"
+            "\tpatpat\t\t\t\tTest Module\n\n";
+
+}
+
+void shellcodeList()
+{
+
+    cout <<
+            "\n\tLinux x86\n"
+            "\t===========\n\n"
+            "\t\tlinux86/exec\n"
+            "\t\tlinux86/download&execute\n"
+            "\t\tlinux86/binsh\n"
+            "\t\tlinux86/read\n"
+            "\t\tlinux86/chmod\n"
+            "\t\tlinux86/tcp_bind\n"
+            "\t\tlinux86/reverse_tcp\n"
+            "\t\tlinux86/cd_eject\n\n";
+
+
+    cout <<
+            "\n\tLinux x64\n"
+            "\t===========\n\n"
+            "\t\tlinux64/binsh\n"
+            "\t\tlinux64/read\n"
+            "\t\tlinux64/tcp_bind\n"
+            "\t\tlinux64/reverse_tcp\n\n";
+
+
+    cout <<
+            "\n\tLinux x86/x64 [Works on both]\n"
+            "\t===========\n\n"
+            "\t\tlinux/binsh\n"
+            "\t\tlinux/read\n"
+            "\t\tlinux/tcp_bind\n"
+            "\t\tlinux/reverse_tcp\n\n";
+
+
+    cout <<
+            "\n\tLinux ARM\n"
+            "\t===========\n\n"
+            "\t\tlinux_arm/exec\n"
+            "\t\tlinux_arm/binsh\n"
+            "\t\tlinux_arm/chmod\n"
+            "\t\tlinux_arm/reverse_tcp\n\n";
+
+
+    cout <<
+            "\n\tLinux MIPS\n"
+            "\t===========\n\n"
+            "\t\tlinux_mips/binsh\n"
+            "\t\tlinux_mips/chmod\n"
+            "\t\tlinux_mips/tcp_bind\n\n";
+
+
+    cout <<
+            "\n\tSolaris x86\n"
+            "\t===========\n\n"
+            "\t\tsolarisx86/binsh\n"
+            "\t\tsolarisx86/read\n"
+            "\t\tsolarisx86/reverse_tcp\n"
+            "\t\tsolarisx86/tcp_bind\n\n";
+
+
+    cout <<
+            "\n\tWindows\n"
+            "\t===========\n\n"
+            "\t\twindows/exec\n"
+            "\t\twindows/download&execute\n"
+            "\t\twindows/messagebox\n"
+            "\t\twindows/tcp_bind\n"
+            "\t\twindows/reverse_tcp\n\n";
+
+
+    cout <<
+            "\n\tOSX x86\n"
+            "\t===========\n\n"
+            "\t\tosx86/binsh\n"
+            "\t\tosx86/tcp_bind\n"
+            "\t\tosx86/reverse_tcp\n\n";
+
+
+    cout <<
+            "\n\tOSX x64\n"
+            "\t===========\n\n"
+            "\t\tosx64/binsh\n"
+            "\t\tosx64/tcp_bind\n"
+            "\t\tosx64/reverse_tcp\n\n";
+
+
+    cout <<
+            "\n\tFreeBSD x86\n"
+            "\t===========\n\n"
+            "\t\tFreeBSDx86/binsh\n"
+            "\t\tFreeBSDx86/read\n"
+            "\t\tFreeBSDx86/tcp_bind\n"
+            "\t\tFreeBSDx86/reverse_tcp\n"
+            "\t\tFreeBSDx86/reverse_tcp2 (through /bin/sh)\n"
+            "\t\tFreeBSDx86/exec\n\n";
+
+
+    cout <<
+            "\n\tFreeBSD x64\n"
+            "\t===========\n\n"
+            "\t\tFreeBSDx64/binsh\n"
+            "\t\tFreeBSDx64/tcp_bind\n"
+            "\t\tFreeBSDx64/reverse_tcp\n"
+            "\t\tFreeBSDx64/exec\n\n";
+
+
+}
+
+void backdoorList()
+{
+
+    cout <<
+            "\n\tBinaries\n"
+            "\t==========\n";
+
+    noModule();
+
+    cout <<
+            "\n\tScripting Payloads\n"
+            "\t===================\n\n"
+            "\t backdoors/unix/python/reverse_tcp\n"
+            "\t backdoors/unix/perl/reverse_tcp\n"
+            "\t backdoors/unix/bash/reverse_tcp\n"
+            "\t backdoors/unix/ruby/reverse_tcp\n"
+            "\t backdoors/windows/asm/reverse_tcp\n"
+            "\t backdoors/windows/ps/reverse_tcp\n\n\n";
+
+}
 
 void green()
 {
@@ -134,7 +287,8 @@ char *shorter(char *str, int p)
     return str; 
 }
 
-void help(){
+void help()
+{
     green(); cout <<
             "\nUsage Commands\n"
             "===============\n"
@@ -319,23 +473,36 @@ int main(void)
         else if (!strcmp(command,"clear")) {
             clear();
         }
+
         else if (!strcmp(command,"exit") || cin.eof()) {
             closeApp();
         }
+
         else if (!strcmp(command, "use")) {
+            
             int sjsj; 
             string usetxt, type, oskaka, opti;
             str =  shorter(command,4);
             
             if(command[4] == '\0') {
+
                 useCommand();
+
             } else {
 
                 // Injectors
-                if(!strcmp(str, "inj")){ usetxt=str; type = "injector"; }
+                if(!strcmp(str, "inj")) {
+
+                    usetxt=str; 
+                    type = "injector";
+
+                }
 
                 // Encoders
-                else if(!strcmp(str, "encd")){ usetxt=str; type = "encoder"; }
+                else if(!strcmp(str, "encd")) { 
+                    usetxt=str; 
+                    type = "encoder"; 
+                }
 
                 // Shellcodes
                 #include "core/shellcodes/s_modules.cpp"
@@ -353,16 +520,22 @@ int main(void)
                 //  By type of console launch.
 
                 if (type == "injector") {
+                
                     #include "core/injectors/i_console.cpp"
+                
                 }
 
                 else if (type == "encoder") {
+                
                     #include "core/encoders/e_console.cpp"
+                
                 }
 
                 else if (type == "shellcode") {
+                
                     string args1 = "None", args2 = "None";
                     #include "core/shellcodes/s_console.cpp"
+                
                 }
 
                 else if (type == "backdoor") {
@@ -372,11 +545,13 @@ int main(void)
 
                     string lhost = "None", lport = "None";
                     #include "core/backdoors/b_console.cpp"
+                
                 }
             }
         }
 
         else if (!strcmp(command, "os")) {
+        
             white();
             str =  shorter(command,3);
             if(command[3] == '\0') {
@@ -385,12 +560,17 @@ int main(void)
                 system(str);
             }
             putchar('\n');
+        
         }
+
         else if (!strcmp(command,"show")) {
             
             str = shorter(command,5);
+            
             if (command[6] == '\0') {
+
                 showCommand();
+            
             } else {
 
                 green();
@@ -419,6 +599,7 @@ int main(void)
                 }
             }
         }
+        
         else {
             
             red(); 

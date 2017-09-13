@@ -1,43 +1,41 @@
-void banner(){
+void banner() {
     
-    int shellcodeP = 48,
-        encodersP = 0,
-        injectorP = 0,
-        backdoorsP = 6,
-        differentOsP = 11;
+    int _pshellcode = 48,
+        _pencoders = 0,
+	_pinjector = 0,
+        _pbackdoors = 6,
+        _pdifferentOs = 11;
 
-    srand ( time(NULL) );
-    int x = rand() % 5 + 1 ;
-    char kaka;
-    FILE *fp;
-    if(x == 1) {
-        fp = fopen("core/banner/logo1.txt","r");
+    srand(time(NULL));
+    int _r = rand() % 5 + 1 ;
+    char _temp;
+    FILE *_file;
+    
+    if(_r == 1) {
+        _file = fopen("core/banner/logo1.txt","r");
     } 
-    else if(x == 2){
-        fp = fopen("core/banner/logo2.txt", "r");
+    else if(_r == 2){
+        _file = fopen("core/banner/logo2.txt", "r");
     }
-    else if(x == 3){
-        fp = fopen("core/banner/logo3.txt", "r");
+    else if(_r == 3){
+        _file = fopen("core/banner/logo3.txt", "r");
     }
-    else if(x == 4){
-        fp = fopen("core/banner/logo4.txt", "r");
+    else if(_r == 4){
+        _file = fopen("core/banner/logo4.txt", "r");
     }
-    else if(x == 5){
-        fp = fopen("core/banner/logo5.txt", "r");
+    else if(_r == 5){
+        _file = fopen("core/banner/logo5.txt", "r");
     }
 
-    rlutil::setColor(12); // Red Color
+    rlutil::setColor(12);
     
-    while((kaka = fgetc(fp))!=EOF){
-        printf("%c",kaka);
-    }
+    while( (_temp = fgetc(_file)) != EOF )
+        putchar(_temp);
+		;
     
-    fclose(fp);
+    fclose(_file);
 
     putchar('\n');
-
-    // Red Color - rlutil::setColor(12);
-    // Green Color - rlutil::setColor(2);
 
     rlutil::setColor(2);
     printf("        =[ l0l            -");
@@ -46,27 +44,27 @@ void banner(){
     rlutil::setColor(2);
     printf("]\n");
 
-    printf(" + -- --=[ %d shellcode   -", shellcodeP);
+    printf(" + -- --=[ %d shellcode   -", _pshellcode);
     rlutil::setColor(12);
-    printf("  %d Different OS                    ", differentOsP);
+    printf("  %d Different OS                    ", _pdifferentOs);
     rlutil::setColor(2);
     printf("]\n");
 
 
-    printf(" + -- --=[ %d encoders     -", encodersP);
+    printf(" + -- --=[ %d encoders     -", _pencoders);
     rlutil::setColor(12);
     printf("  (Shellcodes/executable files)      ");
     rlutil::setColor(2);
     printf("]\n");
 
 
-    printf(" + -- --=[ %d injector     -", injectorP);
+    printf(" + -- --=[ %d injector     -", _pinjector);
     rlutil::setColor(12);
     printf("  (PE,ELF,DLL,RAR,DEB etc...)        ");
     rlutil::setColor(2);
     printf("]\n");
 
-    printf(" + -- --=[ %d backdoors    -", backdoorsP);
+    printf(" + -- --=[ %d backdoors    -", _pbackdoors);
     rlutil::setColor(12);
     printf("  (ReverseShell)                     ");
     rlutil::setColor(2);
@@ -74,10 +72,8 @@ void banner(){
 
     printf(" + -- --=[ Open Source    :");
     rlutil::setColor(12);
-    printf("  https://github.com/m3pt0r/l0l      ");
+    printf("  https://github.com/roissy/l0l      ");
     rlutil::setColor(2);
-    printf("]\n");
-
-    putchar('\n');
-
+    printf("]\n\n");
+    
 }

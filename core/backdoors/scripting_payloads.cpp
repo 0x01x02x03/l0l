@@ -158,7 +158,7 @@ void scriptPayloads (char *backdoor, string lhost, string lport) {
     }
 
     char rn[30];
-    srand (time(NULL));
+    srand(time(NULL));
     int x = rand() % 99999 + 11111;
     snprintf(rn, sizeof(rn), "%d", x);
     strcat(rn,ext);

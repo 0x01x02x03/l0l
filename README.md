@@ -66,6 +66,6 @@ Please Report bugs! with Jabber, E-Mail, Pull Request etc.
 
 ## Contact
 
-E-Mail : m3pt0r@protonmail.com
+E-Mail : roissy@protonmail.com
 
-Jabber : m3pt0r@exploit.im
+Jabber : roissy@exploit.im

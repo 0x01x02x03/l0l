@@ -1,21 +1,21 @@
 from random import randint
 import os
 
-def logs(  data=None, extension=None, kakaos=None):
+def logs(  data=None, extension=None, _os=None):
     while True:
         if extension == None:
             name = "{0}".format(str(randint(0, 999999999)))
-            if kakaos == "windows":
+            if _os == "windows":
                 name+=".exe"
-	    if kakaos == "linux":
+	    if _os == "linux":
         	name+=".elf"
-            if kakaos == "linux_x86":
+            if _os == "linux_x86":
 		name+=".elf"
-	    if kakaos == "linux_x64":
+	    if _os == "linux_x64":
 		name+=".elf"
-	    if kakaos == "linux_arm":
+	    if _os == "linux_arm":
                 name+=".elf"
-	    if kakaos == "linux_mips":
+	    if _os == "linux_mips":
                 name+=".elf"
 
         else:

@@ -1,18 +1,26 @@
-do{
-    string bcmd;
+do 
+{
+    string backdoorInput;
     char *str2, *str3;
 
-    blue(); cout << "l0l";
-    gray(); cout << ":";
-    white(); cout << "backdoor(";
-    red(); cout << parsermodule;
-    white(); cout << ")";
-    blue(); cout << " > ";
-    white(); getline(cin, bcmd);
+    blue(); 
+    cout << "l0l";
+    gray(); 
+    cout << ":";
+    white(); 
+    cout << "backdoor(";
+    red(); 
+    cout << parsermodule;
+    white(); 
+    cout << ")";
+    blue(); 
+    cout << " > ";
+    white(); 
+    getline(cin, backdoorInput);
 
-    char* usecmd = strdup(bcmd.c_str());
-    char* usecmd2 = strdup(bcmd.c_str());
-    char* usecmd3 = strdup(bcmd.c_str());
+    char* usecmd = strdup(backdoorInput.c_str());
+    char* usecmd2 = strdup(backdoorInput.c_str());
+    char* usecmd3 = strdup(backdoorInput.c_str());
 
     strcpy(usecmd2,usecmd);
     strtok(usecmd2, " ");
@@ -95,4 +103,4 @@ do{
         red(); printf("[-] Unknown command: %s\n", usecmd);
     }
 
-}while(1);
+} while(1);
